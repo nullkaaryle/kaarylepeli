@@ -1,5 +1,5 @@
-###Aihe:
+###Aihe: Käärylepeli
 
-###Käyttäjät:
+###Käyttäjät: Yksi pelaaja
 
-###Käyttäjien toiminnot
+###Käyttäjien toiminnot: Pelaaja liikuttaa pelihahmoa pelikentällä. Pelaajan tavoitteena on pisteiden kerääminen. Peli päättyy kuolemaan.
