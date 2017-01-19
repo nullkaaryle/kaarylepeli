@@ -1,3 +1,3 @@
 # kaarylepeli
 
-It all begins here. Maybe.
+Ohjelmoinnin harjoitustyö.
