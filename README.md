@@ -1,4 +1,5 @@
-## Käärylepeli
+
+## Käärylepeli ![Kääryle](https://raw.githubusercontent.com/nullkaaryle/kaarylepeli/master/dokumentaatio/running_roll.png)
 
 Ohjelmoinnin harjoitustyö 2017.
 
