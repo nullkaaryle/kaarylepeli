@@ -1,4 +1,4 @@
-package kaarypeli;
+package kaarylepeli;
 
 import java.util.*;
 
@@ -13,7 +13,7 @@ public abstract class Hahmo {  //Hahmo on Puolukkaa ja Kääryletta yhdistävä 
     public List<Osa> haeOsat() {
         return this.osat;
     }
-    
+
     public void lisaaOsa(Osa uusiOsa) {
         this.osat.add(uusiOsa);
     }
@@ -28,23 +28,15 @@ public abstract class Hahmo {  //Hahmo on Puolukkaa ja Kääryletta yhdistävä 
                 }
             }
         }
-        
+
         return false;
     }
 
-    public void liikuVasemmalle() {      //koordinaattien tarkistus puuttuu tässä vaiheessa!
+    public void liikuOikealle() {      //koordinaattien tarkistus puuttuu tässä vaiheessa!
         for (Osa osa : this.osat) {
             int x = osa.haeOsanX();
-            int uusiX = x - 1;
+            int uusiX = x + 1;
             osa.asetaOsanX(uusiX);
-        }
-    }
-
-    public void liikuYlos() {           //koordinaattien tarkistus puuttuu tässä vaiheessa
-        for (Osa osa : this.osat) {
-            int y = osa.haeOsanY();
-            int uusiY = y - 1;
-            osa.asetaOsanY(uusiY);
         }
     }
 
@@ -56,6 +48,5 @@ public abstract class Hahmo {  //Hahmo on Puolukkaa ja Kääryletta yhdistävä 
         }
 
     }
-
 
 }

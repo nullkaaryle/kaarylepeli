@@ -1,4 +1,4 @@
-package kaarypeli;
+package kaarylepeli;
 
 public class Kaaryle extends Hahmo {  //kaaryle koostuu Osista
 
