@@ -10,4 +10,5 @@ Pelaaja liikuttaa pelihahmoa pelikentällä. Pelaajan tavoitteena on pisteiden k
 Pelihahmon täytyy varoa vihollisia, jotka tulevat kentällä vastaan. Pelaajan pitää osata oikein ajoitettuna hypätä vihollisten eli esteiden yli, muuta liikkumista ei tarvita, sillä pelihahmo juoksee koko ajan itse eteenpäin.
 
 ###Luokkakaavio:###
-[Käärylepelin luokkakaavio]: https://yuml.me/11ce18a7
+
+![Käärylepelin luokkakaavio](https://yuml.me/11ce18a7)
