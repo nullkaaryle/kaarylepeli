@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 5,
+      <title>File: 10,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.Hahmo.java">kaarylepeli/Hahmo.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Kuuntelija.java">kaarylepeli/gui/Kuuntelija.java</a>
                 </td>
                 <td>
                   0
@@ -60,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.Kaarylepeli.java">kaarylepeli/Kaarylepeli.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.Main.java">kaarylepeli/Main.java</a>
                 </td>
                 <td>
                   0
@@ -74,7 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.Osa.java">kaarylepeli/Osa.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Paivitettava.java">kaarylepeli/gui/Paivitettava.java</a>
                 </td>
                 <td>
                   0
@@ -88,7 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.Kaaryle.java">kaarylepeli/Kaaryle.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Kaaryle.java">kaarylepeli/rakennusosat/Kaaryle.java</a>
                 </td>
                 <td>
                   0
@@ -102,7 +102,77 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.Puolukka.java">kaarylepeli/Puolukka.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Piirtaja.java">kaarylepeli/gui/Piirtaja.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Kayttoliittyma.java">kaarylepeli/gui/Kayttoliittyma.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Osa.java">kaarylepeli/rakennusosat/Osa.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.peli.Kaarylepeli.java">kaarylepeli/peli/Kaarylepeli.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Puolukka.java">kaarylepeli/rakennusosat/Puolukka.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Hahmo.java">kaarylepeli/rakennusosat/Hahmo.java</a>
                 </td>
                 <td>
                   0

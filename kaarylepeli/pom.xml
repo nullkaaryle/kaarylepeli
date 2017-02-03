@@ -38,10 +38,12 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <param>kaarylepeli.*</param>
+                        <param>kaarylepeli.peli*</param>
+                        <param>kaarylepeli.rakennusosat*</param>
                     </targetClasses>
                     <targetTests>
-                        <param>kaarylepeli.*</param>
+                        <param>kaarylepeli.peli*</param>
+                        <param>kaarylepeli.rakenusosat*</param>
                     </targetTests>
                 </configuration>
             </plugin>
