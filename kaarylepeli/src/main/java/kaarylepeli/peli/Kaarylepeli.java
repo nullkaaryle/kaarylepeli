@@ -16,7 +16,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
     private Paivitettava paivitettava;
 
     public Kaarylepeli() {
-        super(1000, null);
+        super(1000, null);  //Timerilta peritty
         this.leveys = 1000;
         this.korkeus = 300;
         this.peliJatkuu = true;
@@ -53,10 +53,11 @@ public class Kaarylepeli extends Timer implements ActionListener {
     //eli näyttää siltä kuin puolukka liikkuisi kohti kaaryletta
     //koska kentässä ei ole vielä rullaavaa taustaa
     @Override
-    public void actionPerformed(ActionEvent painallus) {
+    public void actionPerformed(ActionEvent kello) {
 
         if (peliJatkuu == false) {
             System.out.println("*** Peli loppui! ***");
+            this.stop();
             //pistenäyttö + sammutus
             return;
         }
@@ -78,7 +79,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
 
         for (Puolukka puolukka : this.puolukat) {
             for (int i = 0; i < 10; i++) {
-                puolukka.liikuVasemmalle();;
+                puolukka.liikuVasemmalle();
             }
 
             if (puolukka.haeHahmonX() <= -50) {

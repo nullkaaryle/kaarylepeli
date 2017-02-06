@@ -42,6 +42,8 @@ public class Kaaryle extends Hahmo {  //kaaryle koostuu Osista
 
         if (this.hyppyarvo >= (this.hypynKorkeus * 2)) {
             this.hyppyarvo = 0;
+        
+            
         }
     }
 

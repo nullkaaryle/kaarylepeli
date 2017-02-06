@@ -19,6 +19,7 @@ public abstract class Hahmo {  //Hahmo on Puolukkaa ja Kääryletta yhdistävä 
     }
 
     public boolean osuu(Hahmo hahmo) {
+
         for (Osa osa : this.osat) {
 
             for (Osa hahmonOsa : hahmo.haeOsat()) {
@@ -70,12 +71,10 @@ public abstract class Hahmo {  //Hahmo on Puolukkaa ja Kääryletta yhdistävä 
     }
 
     public int haeHahmonX() {
-        System.out.println("piirtox " + haeVasenYlakulma().haeOsanX());
         return haeVasenYlakulma().haeOsanX();
     }
 
     public int haeHahmonY() {
-        System.out.println("piirtoy " + haeVasenYlakulma().haeOsanY());
         return haeVasenYlakulma().haeOsanY();
     }
 

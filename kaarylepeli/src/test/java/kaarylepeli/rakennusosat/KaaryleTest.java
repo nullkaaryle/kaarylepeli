@@ -43,6 +43,11 @@ public class KaaryleTest {
         kaaryle2.liikuOikealle();
         assertTrue(kaaryle.osuu(kaaryle2));
     }
+    
+    @Test
+    public void jotainnnnn() {
+        
+    }
 
     @Test
     public void vasemmanYlakulmanOsaLoytyy() {

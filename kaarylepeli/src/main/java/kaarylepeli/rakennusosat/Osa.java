@@ -10,10 +10,6 @@ public class Osa {  //yksi osa on yksi osanen hahmoa
         this.y = alkuY;
     }
 
-    public Osa haeOsa() {
-        return this;
-    }
-
     public int haeOsanX() {
         return this.x;
     }
