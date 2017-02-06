@@ -11,3 +11,7 @@ Pelihahmon täytyy varoa vihollisia, jotka tulevat kentällä vastaan. Pelaajan 
 
 #####Pelin toiminnallisuus 3. viikon palautuksessa:#####
 Pelin pystyy käynnistämään. Puolukan liikkkuminen alkaa pienellä viiveellä. Kääryle hyppää SPACE-painikkeella. Peliruutu täytyy itse sulkea.
+
+* * *
+###Luokkakaavio:###
+![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaavio.png)
