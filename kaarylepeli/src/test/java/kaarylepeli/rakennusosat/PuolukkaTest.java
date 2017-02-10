@@ -13,7 +13,7 @@ public class PuolukkaTest {
 
     @Before
     public void setUp() {
-        puolukka = new Puolukka();
+        puolukka = new Puolukka(100, 300);
     }
 
     @Test
@@ -41,16 +41,24 @@ public class PuolukkaTest {
     }
 
     @Test
+    public void puolukkaLiikkuuOikeanMaaran() {
+        int yAluksi = puolukka.haeHahmonY();
+        puolukka.asetaSuunta(Suunta.ALAS);
+        puolukka.liiku(5);
+        assertEquals(yAluksi + 5, puolukka.haeHahmonY());
+    }
+
+    @Test
     public void hahmojenOsumatHuomataan() {
-        Puolukka puolukka2 = new Puolukka();
-        puolukka2.liikuOikealle();
+        Puolukka puolukka2 = new Puolukka(100, 300);
+        puolukka2.liiku(5);
         assertTrue(puolukka.osuu(puolukka2));
     }
 
     @Test
     public void vasemmanYlakulmanOsaLoytyy() {
         Osa kulma = puolukka.haeVasenYlakulma();
-        assertEquals(kulma.toString(), "(970,245)");
+        assertEquals(kulma.toString(), "(100,220)");
     }
 
     public void vasemmanYlakulmanYloytyy() {
@@ -64,31 +72,8 @@ public class PuolukkaTest {
     }
     
     @Test
-    public void puolukkaLiikkuuAlaspain() {
-        int yAluksi = puolukka.haeHahmonY();
-        puolukka.liikuAlas();
-        assertEquals(yAluksi + 1, puolukka.haeHahmonY());
-    }
-    
-    @Test
-    public void puolukkaLiikkuuYlospain() {
-        int yAluksi = puolukka.haeHahmonY();
-        puolukka.liikuYlos();
-        assertEquals(yAluksi - 1, puolukka.haeHahmonY());
-    }
-    
-    @Test
-    public void puolukkaLiikkuuVasemmalle() {
-        int xAluksi = puolukka.haeHahmonX();
-        puolukka.liikuVasemmalle();
-        assertEquals(xAluksi - 1, puolukka.haeHahmonX());
-    }
-    
-    @Test
-    public void puolukkaLiikkuuOikealle() {
-        int xAluksi = puolukka.haeHahmonX();
-        puolukka.liikuOikealle();
-        assertEquals(xAluksi + 1, puolukka.haeHahmonX());
+    public void haeSuuntaToimii() {
+        assertEquals(puolukka.haeSuunta(), Suunta.VASEN);
     }
 
 }

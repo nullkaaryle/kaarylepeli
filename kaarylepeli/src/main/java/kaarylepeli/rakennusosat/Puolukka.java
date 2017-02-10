@@ -1,28 +1,35 @@
 package kaarylepeli.rakennusosat;
 
+import kaarylepeli.peli.Kaarylepeli;
 import kaarylepeli.rakennusosat.Osa;
 import kaarylepeli.rakennusosat.Hahmo;
+import static kaarylepeli.rakennusosat.Suunta.*;
 
-public class Puolukka extends Hahmo { //puolukka koostuu Osista
+/**
+ * Puolukka koostuu Osista ja toteuttaa luokan Hahmo.
+ */
+public class Puolukka extends Hahmo {
 
-    public Puolukka() {
+    public Puolukka(int lahtopisteX, int kentanKorkeus) {
         super();
-        luoPuolukka();
+        luoPuolukka(lahtopisteX, kentanKorkeus);
     }
 
-    //----------------------------------------------------
-    //pelissä on tällä hetkellä vain kerrallaan yksi puolukka,
-    //ja uudelle puolukalle määrätään tietty sijainti 
-    //aina syntymän yhteydessä
-    //mutta jatkossa todennäköisesti useita puolukoita
-    //joiden sijainnit arvotaan satunnaisuuden luomiseksi
-    public void luoPuolukka() {
-        for (int x = 970; x < 1000; x++) {
+    /**
+     * Metodia kutsutaan konstruktorista, ja se luo uudelle puolukalle osat.
+     * Metodissa annetaan lähtöpisteen x-koordinaatti puolukan sijainti
+     * y-akselilla riippuu kentän ja muusin korkeudesta.
+     *
+     * @param lahtopisteX Käyttäjän määrittelemä lähtöpiste
+     * @param kentanKorkeus Pelikentälle asetettu korkeus
+     */
+    public void luoPuolukka(int lahtopisteX, int kentanKorkeus) {
 
-            for (int y = 245; y < 275; y++) {
+        for (int x = lahtopisteX; x < (lahtopisteX + 30); x++) {
+
+            for (int y = (kentanKorkeus - 80); y < (kentanKorkeus - 50); y++) {  //vakiot asettavat puolukan oikeaan kohtaan
                 this.lisaaOsa(new Osa(x, y));
             }
         }
     }
-
 }

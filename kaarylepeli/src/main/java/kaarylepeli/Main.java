@@ -7,14 +7,18 @@ import kaarylepeli.rakennusosat.Kaaryle;
 
 public class Main {
 
+    /**
+     * Pääohjelma, jossa luodaan uusi peli, sen käyttöliittymä ja käynnistetään
+     * pelin kello.
+     */
     public static void main(String[] args) {
 
         Kaarylepeli kaarylepeli = new Kaarylepeli();
 
-        Kayttoliittyma liittyma = new Kayttoliittyma(kaarylepeli);
-        SwingUtilities.invokeLater(liittyma);
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(kaarylepeli);
+        SwingUtilities.invokeLater(kayttoliittyma);
 
-        while (liittyma.haePaivitettava() == null) {
+        while (kayttoliittyma.haePaivitettava() == null) {
             try {
                 Thread.sleep(100);
             } catch (InterruptedException ex) {
@@ -22,7 +26,7 @@ public class Main {
             }
         }
 
-        kaarylepeli.asetaPaivitettava(liittyma.haePaivitettava());
+        kaarylepeli.asetaPaivitettava(kayttoliittyma.haePaivitettava());
         kaarylepeli.start();
 
     }

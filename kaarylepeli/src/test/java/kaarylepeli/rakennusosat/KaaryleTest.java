@@ -40,19 +40,14 @@ public class KaaryleTest {
     @Test
     public void hahmojenOsumatHuomataan() {
         Kaaryle kaaryle2 = new Kaaryle();
-        kaaryle2.liikuOikealle();
+        kaaryle2.liiku(2);
         assertTrue(kaaryle.osuu(kaaryle2));
-    }
-    
-    @Test
-    public void jotainnnnn() {
-        
     }
 
     @Test
     public void vasemmanYlakulmanOsaLoytyy() {
         Osa kulma = kaaryle.haeVasenYlakulma();
-        assertEquals(kulma.toString(), "(50,175)");
+        assertEquals(kulma.toString(), "(50,150)");
     }
 
     public void vasemmanYlakulmanYloytyy() {
@@ -77,31 +72,35 @@ public class KaaryleTest {
     }
 
     @Test
-    public void kaaryleLiikkuuAlaspain() {
-        int yAluksi = kaaryle.haeHahmonY();
-        kaaryle.liikuAlas();
-        assertEquals(yAluksi + 1, kaaryle.haeHahmonY());
+    public void hyppyarvonLakipisteOikein() {
+        kaaryle.kasvataHyppyarvoa(200);
+        assertEquals(kaaryle.hyppyarvo(), 0);
     }
 
     @Test
-    public void kaaryleLiikkuuYlospain() {
-        int yAluksi = kaaryle.haeHahmonY();
-        kaaryle.liikuYlos();
-        assertEquals(yAluksi - 1, kaaryle.haeHahmonY());
+    public void hyppyarvonMuutosOikein() {
+        kaaryle.kasvataHyppyarvoa(100);
+        assertEquals(kaaryle.hyppyarvo(), 100);
     }
 
     @Test
-    public void kaaryleLiikkuuVasemmalle() {
+    public void kaaryleOsaaLiikkua() {
+        int kaaryleX = kaaryle.haeHahmonX();
+        kaaryle.liiku(10);
+        assertEquals(kaaryle.haeHahmonX(), kaaryleX - 10);
+    }
+
+    @Test
+    public void haeSuuntaToimii() {
+        assertEquals(kaaryle.haeSuunta(), Suunta.VASEN);
+    }
+
+    @Test
+    public void kaaryleenSuunnanAsetusToimii() {
         int xAluksi = kaaryle.haeHahmonX();
-        kaaryle.liikuVasemmalle();
-        assertEquals(xAluksi - 1, kaaryle.haeHahmonX());
-    }
-
-    @Test
-    public void kaaryleLiikkuuOikealle() {
-        int xAluksi = kaaryle.haeHahmonX();
-        kaaryle.liikuOikealle();
-        assertEquals(xAluksi + 1, kaaryle.haeHahmonX());
+        kaaryle.asetaSuunta(Suunta.OIKEA);
+        kaaryle.liiku(10);
+        assertTrue(xAluksi < kaaryle.haeHahmonX());
     }
 
 }
