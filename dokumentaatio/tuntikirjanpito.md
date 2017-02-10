@@ -9,3 +9,6 @@ Päivä | Tunnit | Kuvaus
 30.01.2017 | 0.5 h | Maven-ongelma ratkaistu.
 02.02.2017 | 5.0 h | Työskentelyä, paljon opiskelua ja ohjelmointiakin.
 03.02.2017 | 9.0 h | Työskentelyä, paljon ohjelmointia, testit ja dokumentaatiot.
+06.02.2017 | 2.0 h | Pajassa työskentelyä, edellisen viikon palautteen perusteella korjauksia (mm. PIT-raportti korjattu).
+09.02.2017 | 4.0 h | Opiskelua, testejä.
+10.02.2017 | 8.0 h | Ohjelmointia, testejä, JavaDocia. Lisätty mm. puolukoiden luonti, pisteominaisuus, ja taustat peliin.
