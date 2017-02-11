@@ -6,7 +6,7 @@ import static kaarylepeli.rakennusosat.Suunta.*;
 
 /**
  * Hahmo on Puolukkaa ja Kääryletta yhdistävä abstrakti luokka, yksi hahmo
- * koostuu useasta osasta. Jatkossa hahmolla voi olla myös vauhti.
+ * koostuu useasta osasta. Jatkossa hahmolla voisi olla myös vauhti.
  */
 public abstract class Hahmo {
 

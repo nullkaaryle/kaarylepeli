@@ -10,6 +10,8 @@ public class Main {
     /**
      * Pääohjelma, jossa luodaan uusi peli, sen käyttöliittymä ja käynnistetään
      * pelin kello.
+     * 
+     * @param args  komentoriviargumentit
      */
     public static void main(String[] args) {
 
