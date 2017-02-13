@@ -14,6 +14,11 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private int leveys;
     private int korkeus;
 
+    /**
+     * Piirtaja-luokan konstruktori.
+     * 
+     * @param peli  Kaarylepeli-luokka parametrina
+     */
     public Piirtaja(Kaarylepeli peli) {
         this.kaarylepeli = peli;
         this.leveys = peli.haeKentanLeveys();

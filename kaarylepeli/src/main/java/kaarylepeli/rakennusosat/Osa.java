@@ -2,34 +2,64 @@ package kaarylepeli.rakennusosat;
 
 /**
  * Hahmo-luokan oliot koostuvat Osa-luokan olioista.
- *
  */
 public class Osa {  //
 
     private int x;
     private int y;
 
+    /**
+     * Osa-luokan konstruktori.
+     *
+     * @param alkuX Osan x-koordinaatti
+     * @param alkuY Osan y-koordinaatti
+     */
     public Osa(int alkuX, int alkuY) {
         this.x = alkuX;
         this.y = alkuY;
     }
 
+    /**
+     * Metodin avulla haetaan osan koordinaatti.
+     *
+     * @return palauttaa tämän osan x-koordinaatin
+     */
     public int haeOsanX() {
         return this.x;
     }
 
+    /**
+     * Metodin avulla haetaan osan koordinaatti.
+     *
+     * @return palauttaa tämän osan y-koordinaatin
+     */
     public int haeOsanY() {
         return this.y;
     }
 
+    /**
+     * Metodin avulla saadaan muutettua Osan x-koordinaatin arvo.
+     *
+     * @param uusiX käyttäjän antama uusi x-koordinaatti
+     */
     public void asetaOsanX(int uusiX) {
         this.x = uusiX;
     }
 
+    /**
+     * Metodin avulla saadaan muutettua Osan y-koordinaatin arvo.
+     *
+     * @param uusiY käyttäjän antama uusi y-koordinaatti
+     */
     public void asetaOsanY(int uusiY) {
         this.y = uusiY;
     }
 
+    /**
+     * Apumetodi koordinaattien tarkistusta varten.
+     *
+     * @return palauttaa Osan koordinaatit merkkijonona
+     */
     @Override
     public String toString() {
         return "(" + this.x + "," + this.y + ")";

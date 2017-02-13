@@ -5,12 +5,16 @@ import kaarylepeli.rakennusosat.Kaaryle;
 
 /**
  * Näppäimistönkuuntelija-luokka.
- *
  */
 public class Kuuntelija implements KeyListener {
 
     private Kaaryle kaaryle;
 
+    /**
+     * Kuuntelija-luokan konstruktori.
+     *
+     * @param kaaryle Kaarylepeli-luokalta saatu Kaaryle-olio
+     */
     public Kuuntelija(Kaaryle kaaryle) {
         this.kaaryle = kaaryle;
     }

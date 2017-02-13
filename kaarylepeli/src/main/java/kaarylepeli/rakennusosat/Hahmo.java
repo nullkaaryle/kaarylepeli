@@ -13,15 +13,28 @@ public abstract class Hahmo {
     private List<Osa> osat;
     private Suunta suunta;
 
+    /**
+     * Hahmo-luokan konstruktori.
+     */
     public Hahmo() {
         this.osat = new ArrayList<Osa>();
         this.suunta = VASEN;
     }
 
+    /**
+     * Metodin avulla saadaan haettua hahmon tämän hetkinen suunta.
+     *
+     * @return palauttaa hahmon suunnan
+     */
     public Suunta haeSuunta() {
         return this.suunta;
     }
 
+    /**
+     * Metodin avulla saadaan haettua kaikki hahmoon kuuluvat Osa-oliot.
+     *
+     * @return hahmon osat ArrayList-muodossa
+     */
     public List<Osa> haeOsat() {
         return this.osat;
     }
@@ -154,8 +167,9 @@ public abstract class Hahmo {
         }
     }
 
-    //haetaan hahmon vasemman reunan koordinaatit piirtämistä varten
     /**
+     * Metodissa haetaan hahmon vasemman reunan koordinaatit piirtämistä varten.
+     *
      * @return palauttaa vasemman yläkulman Osan, jonka avulla hahmo piirretään
      */
     public Osa haeVasenYlakulma() {
@@ -163,16 +177,18 @@ public abstract class Hahmo {
     }
 
     /**
+     * Yläkulman avulla saadaan hahmon x-koordinaatti piirtämistä varten.
      *
-     * @return palauttaa vasemman yläkulman x-koordinaatin piirtämistä varten
+     * @return palauttaa x-koordinaatin
      */
     public int haeHahmonX() {
         return haeVasenYlakulma().haeOsanX();
     }
 
     /**
+     * Yläkulman avulla saadaan hahmon y-koordinaatti piirtämistä varten.
      *
-     * @return palauttaa vasemman yläkulman y-koordinaatin piirtämistä varten
+     * @return palauttaa y-koordinaatin
      */
     public int haeHahmonY() {
         return haeVasenYlakulma().haeOsanY();

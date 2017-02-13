@@ -5,5 +5,8 @@ package kaarylepeli.gui;
  */
 public interface Paivitettava {
 
+    /**
+     * Rajapinnan toteuttavien luokkien pitää toteuttaa tämä metodi.
+     */
     void paivita();
 }

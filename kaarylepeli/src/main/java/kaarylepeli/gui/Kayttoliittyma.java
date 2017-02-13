@@ -16,16 +16,34 @@ public class Kayttoliittyma implements Runnable {
     private JFrame kehys;
     private Piirtaja piirtaja;
 
+    /**
+     * Kayttoliittyma-luokan konstruktori. Aluksi kehystä ja piirtäjää ei ole
+     * asetettu.
+     *
+     * @param peli Kaarylepeli luokan ilmentymä
+     */
     public Kayttoliittyma(Kaarylepeli peli) {
         this.kaarylepeli = peli;
         this.kehys = null;
         this.piirtaja = null;
     }
 
+    /**
+     * Metodin avulla haetaan käyttöliittymän JFrame. Palauttaa null, jos ei
+     * asetettu.
+     *
+     * @return palauttaa JFrame-kehyksen
+     */
     public JFrame haeKehys() {
         return this.kehys;
     }
 
+    /**
+     * Metodin avulla haetaan käyttöliittymän Paivettava-rajapinnan toteuttava
+     * olio. Palauttaa null, jos ei asetettu.
+     *
+     * @return palauttaa Piirtaja-olion
+     */
     public Paivitettava haePaivitettava() {
         return this.piirtaja;
     }

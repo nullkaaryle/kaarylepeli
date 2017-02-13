@@ -12,6 +12,10 @@ public class Kaaryle extends Hahmo {
     private int hyppyarvo;
     private int hypynKorkeus;
 
+    /**
+     * Konstruktori kutsuu Hahmo-luokan konstruktoria. luoKaaryle()-metodia
+     * kutsutaan konstruktorista.
+     */
     public Kaaryle() {
         super();
         luoKaaryle();
@@ -35,7 +39,7 @@ public class Kaaryle extends Hahmo {
 
     /**
      * Hyppyarvo on karkea keino kertoa, onko kaaryle maassa tai pitäisikö sen
-     * olla liikkumassa ylös- vai alaspäin
+     * olla liikkumassa ylös- vai alaspäin.
      *
      * @return palauttaa kaaryleen hyppyarvon
      */
