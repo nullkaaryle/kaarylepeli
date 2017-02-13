@@ -13,3 +13,4 @@ Päivä | Tunnit | Kuvaus
 09.02.2017 | 4.0 h | Opiskelua, testejä.
 10.02.2017 | 8.0 h | Ohjelmointia, testejä, JavaDocia. Lisätty mm. puolukoiden luonti, pisteominaisuus, ja taustat peliin.
 11.02.2017 | 2.0 h | Pieniä lauantaiaamun korjauksia ja päivityksiä.
+13.02.2017 | 1.0 h | Checkstyleen lisätty Javadoc-tarkistus, korjattu löydettyjä virheitä.
