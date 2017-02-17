@@ -9,9 +9,16 @@ Pelaaja liikuttaa pelihahmoa pelikentällä. Pelaajan tavoitteena on pisteiden k
 
 Pelihahmon täytyy varoa vihollisia, jotka tulevat kentällä vastaan. Pelaajan pitää osata oikein ajoitettuna hypätä vihollisten eli esteiden yli, muuta liikkumista ei tarvita, sillä pelihahmo "juoksee" koko ajan itse eteenpäin. Peli loppuu jos pelihahmo osuu viholliseen.
 
-#####Pelin toiminnallisuus 4. viikon palautuksessa:#####
-Pelin pystyy käynnistämään. Puolukat ilmestyvät pienellä viiveellä. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Peliruutu täytyy itse sulkea.
+#####Pelin toiminnallisuus 5. viikon palautuksessa:#####
+Peliä coi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa ENTER-painikkeella. Peliruutu täytyy itse sulkea.
 
 * * *
 ###Luokkakaavio:###
-![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaavio.png)
+![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka.png)
+
+* * *
+###Sekvenssikaaviot:###
+![Sekvenssikaavio1](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_pelinKaynnistys.png)
+
+![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_yksiPelisilmukka.png)
+
