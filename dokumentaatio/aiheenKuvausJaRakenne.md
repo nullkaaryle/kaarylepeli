@@ -1,7 +1,5 @@
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-* * *
-
 ###Aihe:###
 Käärylepeli
 
