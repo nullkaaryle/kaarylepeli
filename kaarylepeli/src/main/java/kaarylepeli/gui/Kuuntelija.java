@@ -1,6 +1,8 @@
 package kaarylepeli.gui;
 
 import java.awt.event.*;
+import javax.swing.SwingUtilities;
+import kaarylepeli.peli.Kaarylepeli;
 import kaarylepeli.rakennusosat.Kaaryle;
 
 /**
@@ -8,19 +10,19 @@ import kaarylepeli.rakennusosat.Kaaryle;
  */
 public class Kuuntelija implements KeyListener {
 
-    private Kaaryle kaaryle;
+    private Kaarylepeli kaarylepeli;
 
     /**
      * Kuuntelija-luokan konstruktori.
      *
-     * @param kaaryle Kaarylepeli-luokalta saatu Kaaryle-olio
+     * @param kaarylepeli Kaarylepeli-luokan ilmentymä
      */
-    public Kuuntelija(Kaaryle kaaryle) {
-        this.kaaryle = kaaryle;
+    public Kuuntelija(Kaarylepeli kaarylepeli) {
+        this.kaarylepeli = kaarylepeli;
     }
 
     /**
-     * Tarkastaa näppäimistön painalluksen ja muokkaa kaaryleen toimintoja sen
+     * Tarkastaa näppäimistön painalluksen ja muokkaa pelin toimintoja sen
      * mukaisesti.
      *
      * @param e tapahtuma näppäimistöltä
@@ -28,9 +30,13 @@ public class Kuuntelija implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_SPACE || e.getKeyCode() == KeyEvent.VK_UP) {
-            if (this.kaaryle.hyppyarvo() == 0) {
-                this.kaaryle.kasvataHyppyarvoa(1);
+            if (this.kaarylepeli.haeKaaryle().onMaassa()) {
+                this.kaarylepeli.haeKaaryle().hyppaaIlmaan();
             }
+        }
+
+        if (e.getKeyCode() == KeyEvent.VK_ENTER && this.kaarylepeli.peliJatkuu() == false) {
+            this.kaarylepeli.aloitaUusiPeli();
         }
 
     }

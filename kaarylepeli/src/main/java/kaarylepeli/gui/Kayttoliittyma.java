@@ -69,7 +69,7 @@ public class Kayttoliittyma implements Runnable {
     public void luoKomponentit(Container sisaltaja) {
         this.piirtaja = new Piirtaja(this.kaarylepeli);
         sisaltaja.add(piirtaja);
-        Kuuntelija kuuntelija = new Kuuntelija(this.kaarylepeli.haeKaaryle());
+        Kuuntelija kuuntelija = new Kuuntelija(this.kaarylepeli);
         this.kehys.addKeyListener(kuuntelija);
     }
 

@@ -13,16 +13,34 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private Kaarylepeli kaarylepeli;
     private int leveys;
     private int korkeus;
+    private Image taustakuva;
+    private Image kaaryleenKuva;
+    private Image puolukanKuva;
+    private Image muusinKuva;
+    private Image pokaalinKuva;
 
     /**
      * Piirtaja-luokan konstruktori.
-     * 
-     * @param peli  Kaarylepeli-luokka parametrina
+     *
+     * @param peli Kaarylepeli-luokka parametrina
      */
     public Piirtaja(Kaarylepeli peli) {
         this.kaarylepeli = peli;
         this.leveys = peli.haeKentanLeveys();
         this.korkeus = peli.haeKentanKorkeus();
+        this.taustakuva = new ImageIcon("src/main/resources/kaarylepelikuvat/tausta.png").getImage();
+        this.kaaryleenKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryle.png").getImage();
+        this.puolukanKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/puolukka.png").getImage();
+        this.muusinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/muusi.png").getImage();
+        this.pokaalinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/pokaali.png").getImage();
+    }
+
+    /**
+     * Metodi pyytää uudelleenpiirtoa eli kentän päivitystä.
+     */
+    @Override
+    public void paivita() {
+        this.repaint();
     }
 
     /**
@@ -37,38 +55,28 @@ public class Piirtaja extends JPanel implements Paivitettava {
         Graphics2D graf2d = (Graphics2D) g;
         graf2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         piirraTausta(graf2d);
+        piirraMuusi(graf2d);
         piirraPuolukat(graf2d);
         piirraKaaryle(graf2d);
         piirraPisteet(graf2d);
     }
 
     /**
-     * Metodi piirtää pistetilanteen pelikentän vasempaan yläkulmaan, ja lopulta
-     * Game Over -tekstin.
-     *
-     * @param g grafiikka
-     */
-    public void piirraPisteet(Graphics g) {
-        g.setColor(Color.WHITE);
-        g.setFont(new Font("Arial", 1, 20));
-        g.drawString("Pisteet: " + String.valueOf(kaarylepeli.haePisteet()), 20, 30);
-
-        if (kaarylepeli.peliJatkuu() == false) {
-            g.setFont(new Font("Arial", 1, 50));
-            g.drawString("Peli päättyi!", leveys / 2 - 150, korkeus / 2);
-        }
-    }
-
-    /**
-     * Metodi piirtää pelin taustan ja maana toimivan perunamuusin.
+     * Metodi piirtää pelin taustan.
      *
      * @param g grafiikka
      */
     public void piirraTausta(Graphics g) {
-        g.setColor(Color.CYAN);
-        g.fillRect(0, 0, leveys, korkeus);
-        g.setColor(Color.YELLOW);
-        g.fillRect(0, korkeus - 50, leveys, 50);
+        g.drawImage(taustakuva, 0, 0, this);
+    }
+
+    /**
+     * Metodi piirtää muusin pelikentän alareunaan.
+     *
+     * @param g grafiikka
+     */
+    public void piirraMuusi(Graphics g) {
+        g.drawImage(muusinKuva, 0, (this.korkeus - 65), this);
     }
 
     /**
@@ -77,9 +85,8 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * @param g grafiikka
      */
     public void piirraPuolukat(Graphics g) {
-        g.setColor(Color.RED);
         for (Puolukka puolukka : this.kaarylepeli.haePuolukat()) {
-            g.fillOval(puolukka.haeHahmonX(), puolukka.haeHahmonY(), 30, 30);
+            g.drawImage(puolukanKuva, puolukka.haeHahmonX(), puolukka.haeHahmonY(), this);
         }
     }
 
@@ -91,17 +98,45 @@ public class Piirtaja extends JPanel implements Paivitettava {
     public void piirraKaaryle(Graphics g) {
         int kaaryleenX = this.kaarylepeli.haeKaaryle().haeHahmonX();
         int kaaryleenY = this.kaarylepeli.haeKaaryle().haeHahmonY();
-        g.setColor(Color.GREEN);
-        g.fillRect(kaaryleenX, kaaryleenY, 50, 100);
-        Rectangle oval = new Rectangle();
+        g.drawImage(kaaryleenKuva, kaaryleenX, kaaryleenY, this);
     }
 
     /**
-     * Metodi pyytää uudelleenpiirtoa eli kentän päivitystä.
+     * Metodi piirtää pistetilanteen pelikentän vasempaan yläkulmaan, ja lopulta
+     * Game Over -tekstin.
+     *
+     * @param g grafiikka
      */
-    @Override
-    public void paivita() {
-        this.repaint();
+    public void piirraPisteet(Graphics g) {
+        String pisteteksti = "Pisteet: " + String.valueOf(kaarylepeli.haePisteet());
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", 1, 20));
+        g.drawString(pisteteksti, 20, 30);
+
+        if (kaarylepeli.peliJatkuu() == false) {
+            piirraLopputilanne(g, pisteteksti);
+        }
+    }
+
+    /**
+     * Pelin päätyttyä piirtää Game Over -tekstin ja mahdolliset ennätyspisteet.
+     *
+     * @param g grafiikka
+     * @param pisteteksti pisteteksti String-muodosaa
+     */
+    public void piirraLopputilanne(Graphics g, String pisteteksti) {
+        g.setFont(new Font("Arial", 1, 50));
+        g.drawString("Peli päättyi!", leveys / 2 - 150, korkeus / 2);
+        g.setFont(new Font("Arial", 1, 23));
+        g.drawString("- paina enter ja pelaa uudelleen -", leveys / 2 - 190, korkeus / 2 + 35);
+
+        if (kaarylepeli.tuliEnnatys()) {
+            g.setColor(Color.RED);
+            g.setFont(new Font("Arial", 1, 20));
+            g.drawString(pisteteksti + " - UUSI ENNÄTYS!", 20, 30);
+            g.drawImage(pokaalinKuva, kaarylepeli.haeKaaryle().haeHahmonX() + 50, kaarylepeli.haeKaaryle().haeHahmonY() + 20, this);
+        }
+
     }
 
 }

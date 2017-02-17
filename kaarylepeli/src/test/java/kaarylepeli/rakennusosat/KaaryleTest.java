@@ -61,7 +61,7 @@ public class KaaryleTest {
     }
 
     @Test
-    public void kaaryleOnAluksiMaassa() {
+    public void kaaryleOnAluksiMaassa1() {
         assertEquals(kaaryle.hyppyarvo(), 0);
     }
 
@@ -103,4 +103,39 @@ public class KaaryleTest {
         assertTrue(xAluksi < kaaryle.haeHahmonX());
     }
 
+    @Test
+    public void kaaryleOnAluksiMaassa2() {
+        assertTrue(kaaryle.onMaassa());
+    }
+
+    @Test
+    public void hyppaaIlmaanLisaaHyppyarvoa() {
+        kaaryle.hyppaaIlmaan();
+        assertEquals(kaaryle.hyppyarvo(), 1);
+    }
+
+    @Test
+    public void ilmaanHyppaamisenJalkeenEiOllaMaassa() {
+        kaaryle.hyppaaIlmaan();
+        assertFalse(kaaryle.onMaassa());
+    }
+
+    @Test
+    public void josOnJoHypattyEiHypataUudelleen() {
+        kaaryle.hyppaaIlmaan();
+        kaaryle.hyppaaIlmaan();
+        assertEquals(kaaryle.hyppyarvo(), 1);
+    }
+
+    @Test
+    public void hyppyarvoOnLakipisteessa() {
+        kaaryle.kasvataHyppyarvoa(140);
+        assertTrue(kaaryle.onMaassa());
+    }
+
+    @Test
+    public void hyppyarvoOnYliLakipisteen() {
+        kaaryle.kasvataHyppyarvoa(141);
+        assertTrue(kaaryle.onMaassa());
+    }
 }

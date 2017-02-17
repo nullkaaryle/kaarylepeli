@@ -1,7 +1,5 @@
 package kaarylepeli.rakennusosat;
 
-import static kaarylepeli.rakennusosat.Suunta.*;
-
 import kaarylepeli.rakennusosat.Hahmo;
 
 /**
@@ -11,6 +9,7 @@ public class Kaaryle extends Hahmo {
 
     private int hyppyarvo;
     private int hypynKorkeus;
+    private boolean onMaassa;
 
     /**
      * Konstruktori kutsuu Hahmo-luokan konstruktoria. luoKaaryle()-metodia
@@ -20,7 +19,8 @@ public class Kaaryle extends Hahmo {
         super();
         luoKaaryle();
         this.hyppyarvo = 0;
-        this.hypynKorkeus = 100;
+        this.hypynKorkeus = 70;
+        this.onMaassa = true;
     }
 
     /**
@@ -35,6 +35,34 @@ public class Kaaryle extends Hahmo {
                 this.lisaaOsa(new Osa(x, y));
             }
         }
+    }
+
+    /**
+     * Metodin avulla voidaan tarkistaa, voiko seuraava hyppy alkaa.
+     *
+     * @return palauttaa true jos Kaaryle ei ole hyppäämässä, false jos jalat
+     * ovat ilamssa
+     */
+    public boolean onMaassa() {
+        return this.onMaassa;
+    }
+
+    /**
+     * Metodin avulla hyppääminen alkaa.
+     */
+    public void hyppaaIlmaan() {
+        if (this.hyppyarvo == 0) {
+            this.onMaassa = false;
+            this.hyppyarvo++;
+        }
+    }
+
+    /**
+     * Metodi asettaa Kaaryleen maahan ja merkitsee hypyn päättyneeksi.
+     */
+    public void laskeuduMaahan() {
+        this.onMaassa = true;
+        this.hyppyarvo = 0;
     }
 
     /**
@@ -57,7 +85,7 @@ public class Kaaryle extends Hahmo {
         this.hyppyarvo += maara;
 
         if (this.hyppyarvo >= (this.hypynKorkeus * 2)) {
-            this.hyppyarvo = 0;
+            this.laskeuduMaahan();
         }
     }
 
