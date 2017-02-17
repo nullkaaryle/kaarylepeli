@@ -41,6 +41,9 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 * * *
 ###Luokkakaavio:###
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka.png)
+* * *
+
+![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
 * * *
 ###Sekvenssikaaviot:###
