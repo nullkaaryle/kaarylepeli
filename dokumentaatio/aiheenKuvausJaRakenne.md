@@ -11,11 +11,11 @@ Pelaaja liikuttaa pelihahmoa pelikentällä pystysuunnassa. Pelaajan tavoitteena
 Pelihahmon täytyy varoa vihollisia, jotka tulevat kentällä vastaan. Pelaajan pitää osata oikein ajoitettuna hypätä vihollisten eli esteiden yli, muuta liikkumista ei tarvita, sillä pelihahmo "juoksee" koko ajan itse eteenpäin. Peli loppuu jos pelihahmo osuu viholliseen.
 
 Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii perunamuusi.
-* * *
+
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-* * *
+
 ###Pelin toiminnallisuus 5. viikon palautuksessa:###
 Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
 
@@ -30,19 +30,21 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 * logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
 * historia: tiedostoon kirjoitus ja huippupisteiden tallentaminen l. hiscore-listan ylläpito
 
-* * *
+
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-* * *
+
 ###Luokkakaavio:###
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka.png)
-* * *
+
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-* * *
+
 ###Sekvenssikaaviot:###
 ![Sekvenssikaavio1](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_pelinKaynnistys.png)
 
 ![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_yksiPelisilmukka.png)
+
+![Muusi](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/muusi.png)
