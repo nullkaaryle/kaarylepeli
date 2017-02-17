@@ -3,6 +3,9 @@
 
 Ohjelmoinnin harjoitustyö 2017.
 
+
+  ![Kääryle](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/kaaryle.png)
+  
 * [Dokumentaatio](https://github.com/nullkaaryle/kaarylepeli/tree/master/dokumentaatio)
   * [Aiheen kuvaus ja rakenne](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)
   * [Tuntikirjanpito](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/tuntikirjanpito.md)
