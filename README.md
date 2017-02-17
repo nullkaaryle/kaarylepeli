@@ -12,7 +12,3 @@ Ohjelmoinnin harjoitustyö 2017.
   * [Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_pysty.png)
   * [PIT-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/pit/201702172343/index.html)
   * [CheckStyle-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/checkstyle/checkstyle.html)
-  
-  
-  
-  ![Kääryle](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/kaaryle.png)
