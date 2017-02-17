@@ -12,26 +12,27 @@ Pelihahmon täytyy varoa vihollisia, jotka tulevat kentällä vastaan. Pelaajan 
 
 Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii perunamuusi.
 
-####Pelin toiminnallisuus 5. viikon palautuksessa:####
+###Pelin toiminnallisuus 5. viikon palautuksessa:###
 Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
 * * *
 
-![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) 
+![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) !
 
 * * *
-####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:#####: 
--lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
--lisätään vaikeusasteet
--tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
+####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:####
+* lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
+* lisätään vaikeusasteet
+* tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
 
-#####Pelin mahdollisia laajennuksia jatkossa:#####: 
+####Pelin mahdollisia laajennuksia jatkossa:####:
 * äänitehosteet: hyppy, puolukan ylitys, kuolema, tasa- ja huippupisteet
 * grafiikka: osuman sattuessa puolukan litistyminen, kääryleen kaatuminen
 * logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
 * historia: tiedostoon kirjoitus ja huippupisteiden tallentaminen l. hiscore-listan ylläpito
 
 * * *
-![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) 
+
+![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
 * * *
 ###Luokkakaavio:###
