@@ -50,4 +50,4 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 ###Sekvenssikaavio pelisilmukasta:###
 ![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_yksiPelisilmukka.png)
 
-
+* * *
