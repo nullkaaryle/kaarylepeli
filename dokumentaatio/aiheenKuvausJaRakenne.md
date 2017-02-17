@@ -24,7 +24,7 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 * lisätään vaikeusasteet
 * tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
 
-####Pelin mahdollisia laajennuksia jatkossa:####:
+####Pelin mahdollisia laajennuksia jatkossa:####
 * äänitehosteet: hyppy, puolukan ylitys, kuolema, tasa- ja huippupisteet
 * grafiikka: osuman sattuessa puolukan litistyminen, kääryleen kaatuminen
 * logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
