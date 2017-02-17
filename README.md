@@ -1,4 +1,4 @@
-![Kääryle](https://raw.githubusercontent.com/nullkaaryle/kaarylepeli/master/dokumentaatio/running_roll.png)
+![Kääryle](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/kaaryle.png)
 
 
 
