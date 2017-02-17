@@ -2,8 +2,10 @@
 ###Aihe:###
 Käärylepeli
 
+
 ###Käyttäjät:###
 Yksi pelaaja
+
 
 ###Käyttäjän toiminnot:###
 Pelaaja liikuttaa pelihahmoa pelikentällä pystysuunnassa. Pelaajan tavoitteena on pisteiden kerääminen. Peli päättyy kuolemaan.
@@ -39,12 +41,11 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka.png)
 
 
-![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
-
+* * *
 
 ###Sekvenssikaaviot:###
 ![Sekvenssikaavio1](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_pelinKaynnistys.png)
 
 ![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_yksiPelisilmukka.png)
 
-![Muusi](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/muusi.png)
+
