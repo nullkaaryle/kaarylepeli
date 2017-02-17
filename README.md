@@ -12,6 +12,6 @@ Ohjelmoinnin harjoitustyö 2017.
 
 ![Kääryle](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/kaaryle.png)
 * * *
-*This is an ongoing Java course project for spring 2017: a game featuring a cabbage roll as a main character and multiple hostile lingon berries to avoid, all treading on a plate of mashed potato.* 
+*This is an ongoing Java course project for spring 2017: a game featuring a little cabbage roll as a main character and multiple hostile lingon berries to be avoided, all of them treading on a plate of mashed potato.* 
 
 *Most of the code, documentation etc. is in Finnish. I decided to use my own drawings.*
