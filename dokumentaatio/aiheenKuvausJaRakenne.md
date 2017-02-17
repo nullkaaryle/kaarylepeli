@@ -10,7 +10,7 @@ Pelaaja liikuttaa pelihahmoa pelikentällä. Pelaajan tavoitteena on pisteiden k
 Pelihahmon täytyy varoa vihollisia, jotka tulevat kentällä vastaan. Pelaajan pitää osata oikein ajoitettuna hypätä vihollisten eli esteiden yli, muuta liikkumista ei tarvita, sillä pelihahmo "juoksee" koko ajan itse eteenpäin. Peli loppuu jos pelihahmo osuu viholliseen.
 
 #####Pelin toiminnallisuus 5. viikon palautuksessa:#####
-Peliä coi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa ENTER-painikkeella. Peliruutu täytyy itse sulkea.
+Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa ENTER-painikkeella. Peliruutu täytyy itse sulkea.
 
 * * *
 ###Luokkakaavio:###
