@@ -14,8 +14,10 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 
 ####Pelin toiminnallisuus 5. viikon palautuksessa:####
 Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
+* * *
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) 
+
 * * *
 ####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:#####: 
 -lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
@@ -28,7 +30,9 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 * logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
 * historia: tiedostoon kirjoitus ja huippupisteiden tallentaminen l. hiscore-listan ylläpito
 
+* * *
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png) 
+
 * * *
 ###Luokkakaavio:###
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka.png)
