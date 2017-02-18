@@ -1,3 +1,4 @@
+![Pilvet karkaavat](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/tausta.png)
 
 ### Tuntikirjanpito
 Päivä | Tunnit | Kuvaus
@@ -17,5 +18,3 @@ Päivä | Tunnit | Kuvaus
 13.02.2017 | 1.0  h | Checkstyleen lisätty Javadoc-tarkistus, korjattu löydettyjä virheitä.
 16.02.2017 | 4.0  h | Opiskelua, koodin parantelua ja testaamista
 16.02.2017 | 10.0 h | Paljon töitä, pistelasku, hypyn parannus, grafiikat ym.
-
-![Pilvet karkaavat](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/tausta.png)
