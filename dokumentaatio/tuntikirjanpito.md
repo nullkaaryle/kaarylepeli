@@ -1,4 +1,3 @@
-![Pilvet karkaavat](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/tausta.png)
 
 ### Tuntikirjanpito
 Päivä | Tunnit | Kuvaus
