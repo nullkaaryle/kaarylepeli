@@ -24,15 +24,18 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 
 ####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:####
 * lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
-* lisätään vaikeusasteet
 * tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
 
 ####Pelin mahdollisia laajennuksia jatkossa:####
+* historia: tiedostoon kirjoitus ja kaikkien aikojen huippupisteiden tallentaminen l. HiScore-listan ylläpito
+* logiikka: lisätään vaikeusasteet (toteutus esim. vauhdin lisäyksellä ja/tai tihenevillä puolukan väleillä
 * äänitehosteet: hyppy, puolukan ylitys, kuolema, tasa- ja huippupisteet
+* logiikka, grafiikka: aloitusnäyttö
 * grafiikka: osuman sattuessa puolukan litistyminen, kääryleen kaatuminen
 * logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
-* historia: tiedostoon kirjoitus ja huippupisteiden tallentaminen l. hiscore-listan ylläpito
-
+* logiikka: kääryleelle mahdollisuus tehdä tuplahyppy, eli korkeampi hyppy
+* logiikka, grafiikka: muutama erikokoinen Puolukka-olio peliin
+* logiikka: mahdollisuus elämiin, eli peli ei loppuisi ensimmäiseen osumaan
 
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
