@@ -111,6 +111,16 @@ public class Kaarylepeli extends Timer implements ActionListener {
     }
 
     /**
+     * Metodi hakee tämän pelisession huippupisteet. Lisätty lähinnä testausta
+     * varten.
+     *
+     * @return palauttaa kokonaislukuna huippupisteet
+     */
+    public int haeHuippupisteet() {
+        return this.huippupisteet;
+    }
+
+    /**
      * Metodin avulla saadaan haettua Paivitettavan eli Piirtäjän.
      *
      * @return Paivitettava-rajapinnan täyttävän

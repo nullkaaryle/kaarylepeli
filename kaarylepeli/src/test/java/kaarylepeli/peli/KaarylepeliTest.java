@@ -5,6 +5,7 @@ import kaarylepeli.gui.Piirtaja;
 import kaarylepeli.rakennusosat.Osa;
 import kaarylepeli.rakennusosat.Puolukka;
 import kaarylepeli.rakennusosat.Kaaryle;
+import kaarylepeli.rakennusosat.Suunta;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -106,6 +107,64 @@ public class KaarylepeliTest {
     @Test
     public void aluksiEiOleEnnatysta() {
         assertFalse(peli.tuliEnnatys());
+    }
+
+    @Test
+    public void aluksiHuippupisteetNolla() {
+        assertEquals(peli.haeHuippupisteet(), 0);
+    }
+
+    @Test
+    public void huippuPisteidenTallennusOnnistuu() {
+        peli.tallennaHuippupisteet(5);
+        assertEquals(peli.haeHuippupisteet(), 5);
+    }
+
+    @Test
+    public void ainaParemmatPisteetTallentuuHuippupisteiksi() {
+        peli.tallennaHuippupisteet(5);
+        peli.tallennaHuippupisteet(10);
+        assertEquals(peli.haeHuippupisteet(), 10);
+    }
+
+    @Test
+    public void josAloitetaanUusiPeliEnnatysSailyy() {
+        peli.tallennaHuippupisteet(5);
+        peli.aloitaUusiPeli();
+        assertEquals(peli.haeHuippupisteet(), 5);
+    }
+
+    @Test
+    public void josAloitetaanUusiPeliPisteitaEiOle() {
+        assertEquals(peli.haePisteet(), 0);
+    }
+
+    @Test
+    public void josAloitetaanUusiPeliPuolukoitaOnViisi() {
+        peli.lisaaPuolukka();
+        peli.aloitaUusiPeli();
+        assertEquals(peli.haePuolukat().size(), 5);
+    }
+
+    @Test
+    public void josAloitetaanUusiPeliPeliOnKaynnissa() {
+        peli.aloitaUusiPeli();
+        assertTrue(peli.peliJatkuu());
+    }
+
+    @Test
+    public void josAloitetaanUusiPeliKaaryleOnPaikoillaan() {
+        peli.haeKaaryle().asetaSuunta(Suunta.YLOS);
+        peli.haeKaaryle().liiku(5);
+        peli.aloitaUusiPeli();
+        assertTrue(peli.haeKaaryle().onMaassa());
+    }
+
+    @Test
+    public void josUudetPisteetOnSamatKuinHuippuPisteetEiTallenneta() {
+        peli.tallennaHuippupisteet(5);
+        peli.tallennaHuippupisteet(5);
+        assertEquals(peli.haeHuippupisteet(), 5);
     }
 
 }
