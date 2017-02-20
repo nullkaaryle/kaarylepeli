@@ -23,7 +23,9 @@ public class Kaarylepeli extends Timer implements ActionListener {
     private boolean peliJatkuu;
     private Kaaryle kaaryle;
     private List<Puolukka> puolukat;
+    private List<Muusi> muusit;
     private Paivitettava paivitettava;
+    private int vauhti;
 
     /**
      * Kaarylepeli-luokan konstruktori. Kutsuu myös Timer-luokan konstruktoria.
@@ -37,11 +39,14 @@ public class Kaarylepeli extends Timer implements ActionListener {
         this.korkeus = 300;
         this.kaaryle = new Kaaryle();
         this.puolukat = new ArrayList<>();
+        this.muusit = new ArrayList<>();
         luoPuolukat(5);
+        luoMuusit();
         this.peliJatkuu = true;
         this.pisteet = 0;
         this.huippupisteet = 0;
         this.ennatys = false;
+        this.vauhti = 12;
     }
 
     /**
@@ -150,9 +155,12 @@ public class Kaarylepeli extends Timer implements ActionListener {
             this.stop();
             return;
         }
-        pisteet++;
+        
+        //pisteet++;
+        muusiEtenee();
         kaaryleenHyppy();
         puolukatVyoryvat();
+        lisaaPisteet();
         tarkistaOsumat();
         this.paivitettava.paivita();
         this.setDelay(50);
@@ -170,6 +178,16 @@ public class Kaarylepeli extends Timer implements ActionListener {
         this.kaaryle = new Kaaryle();
         this.peliJatkuu = true;
         this.restart();
+    }
+    
+    public void lisaaPisteet() {
+        pisteet++;
+        
+        for (Puolukka puolukka : this.puolukat) {
+            if (puolukka.haeHahmonX() >= 50 && puolukka.haeHahmonX() <= (50 + vauhti)) {
+                pisteet += 50;
+            }
+        }
     }
 
     /**
@@ -206,7 +224,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
         boolean puolukkaKuoli = false;
 
         for (Puolukka puolukka : this.puolukat) {
-            puolukka.liiku(12);
+            puolukka.liiku(this.vauhti);
 
             if (puolukka.haeHahmonX() <= -50) {
                 puolukkaKuoli = true;
@@ -292,4 +310,30 @@ public class Kaarylepeli extends Timer implements ActionListener {
 
     }
 
+    public void luoMuusit() {
+        this.muusit.add(new Muusi(0, this.korkeus));
+        this.muusit.add(new Muusi(3000, this.korkeus));
+    }
+
+    public List<Muusi> haeMuusit() {
+        return this.muusit;
+    }
+
+    public void muusiEtenee() {
+        boolean muusiYliReunan = false;
+
+        for (Muusi muusi : this.muusit) {
+            muusi.liiku(this.vauhti);
+
+            if (muusi.haeHahmonX() <= -3000) {
+                muusiYliReunan = true;
+            }
+        }
+
+        if (muusiYliReunan == true) {
+            this.muusit.remove(0);
+            this.muusit.add(new Muusi(3000, this.korkeus));
+        }
+
+    }
 }

@@ -31,7 +31,7 @@ public class Kaaryle extends Hahmo {
     public void luoKaaryle() {
         for (int x = 50; x < 100; x++) {
 
-            for (int y = 150; y < 250; y++) {
+            for (int y = 150; y < 225; y++) {
                 this.lisaaOsa(new Osa(x, y));
             }
         }

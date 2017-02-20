@@ -3,6 +3,7 @@ package kaarylepeli.gui;
 import java.awt.*;
 import javax.swing.*;
 import kaarylepeli.peli.Kaarylepeli;
+import kaarylepeli.rakennusosat.Muusi;
 import kaarylepeli.rakennusosat.Puolukka;
 
 /**
@@ -16,8 +17,13 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private Image taustakuva;
     private Image kaaryleenKuva;
     private Image puolukanKuva;
+    private Image kaaryleVasenJalka;
+    private Image kaaryleOikeaJalka;
+    private Image kaaryleenHyppyKuva;
     private Image muusinKuva;
     private Image pokaalinKuva;
+    private int juoksujalkaVasen;
+    private int juoksujalkaOikea;
 
     /**
      * Piirtaja-luokan konstruktori.
@@ -30,8 +36,11 @@ public class Piirtaja extends JPanel implements Paivitettava {
         this.korkeus = peli.haeKentanKorkeus();
         this.taustakuva = new ImageIcon("src/main/resources/kaarylepelikuvat/tausta.png").getImage();
         this.kaaryleenKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryle.png").getImage();
-        this.puolukanKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/puolukka.png").getImage();
-        this.muusinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/muusi.png").getImage();
+        this.kaaryleOikeaJalka = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleOikeaJalka.png").getImage();
+        this.kaaryleVasenJalka = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleVasenJalka.png").getImage();
+        this.kaaryleenHyppyKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleHyppy.png").getImage();
+        this.puolukanKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/puolukkaIsompi.png").getImage();
+        this.muusinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/muusiPitka.png").getImage();
         this.pokaalinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/pokaali.png").getImage();
     }
 
@@ -76,7 +85,11 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * @param g grafiikka
      */
     public void piirraMuusi(Graphics g) {
-        g.drawImage(muusinKuva, 0, (this.korkeus - 65), this);
+        for (Muusi muusi : this.kaarylepeli.haeMuusit()) {
+            g.drawImage(muusinKuva, muusi.haeHahmonX(), muusi.haeHahmonY(), this);
+        }
+
+        //g.drawImage(muusinKuva, 0, (this.korkeus - 65), this);
     }
 
     /**
@@ -98,7 +111,27 @@ public class Piirtaja extends JPanel implements Paivitettava {
     public void piirraKaaryle(Graphics g) {
         int kaaryleenX = this.kaarylepeli.haeKaaryle().haeHahmonX();
         int kaaryleenY = this.kaarylepeli.haeKaaryle().haeHahmonY();
-        g.drawImage(kaaryleenKuva, kaaryleenX, kaaryleenY, this);
+
+        if (this.kaarylepeli.haeKaaryle().onMaassa() == false) {
+            g.drawImage(kaaryleenHyppyKuva, kaaryleenX, kaaryleenY, this);
+
+        } else {
+
+            if (this.juoksujalkaVasen <= 1) {
+                g.drawImage(kaaryleVasenJalka, kaaryleenX, kaaryleenY, this);
+                juoksujalkaVasen++;
+
+            } else {
+                g.drawImage(kaaryleOikeaJalka, kaaryleenX, kaaryleenY, this);
+                juoksujalkaOikea++;
+            }
+
+            if (juoksujalkaOikea == 1) {
+                juoksujalkaOikea = 0;
+                juoksujalkaVasen = 0;
+            }
+        }
+
     }
 
     /**
@@ -110,6 +143,11 @@ public class Piirtaja extends JPanel implements Paivitettava {
     public void piirraPisteet(Graphics g) {
         String pisteteksti = "Pisteet: " + String.valueOf(kaarylepeli.haePisteet());
         g.setColor(Color.WHITE);
+
+        if (kaarylepeli.haePisteet() > kaarylepeli.haeHuippupisteet() && kaarylepeli.haeHuippupisteet() != 0) {
+            g.setColor(Color.YELLOW);
+        }
+
         g.setFont(new Font("Arial", 1, 20));
         g.drawString(pisteteksti, 20, 30);
 
