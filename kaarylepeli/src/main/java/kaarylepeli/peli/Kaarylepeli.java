@@ -68,6 +68,15 @@ public class Kaarylepeli extends Timer implements ActionListener {
     }
 
     /**
+     * Metodin avulla haetaan lista kaikista Muusi-hahmoista.
+     *
+     * @return palauttaa muusit Listissä
+     */
+    public List<Muusi> haeMuusit() {
+        return this.muusit;
+    }
+
+    /**
      * Tämän metodin avulla voi tarkistaa, onko peli päättynyt.
      *
      * @return palauttaa true, jos peli on käynnissä, false, jos peli on
@@ -155,8 +164,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
             this.stop();
             return;
         }
-        
-        //pisteet++;
+
         muusiEtenee();
         kaaryleenHyppy();
         puolukatVyoryvat();
@@ -179,10 +187,14 @@ public class Kaarylepeli extends Timer implements ActionListener {
         this.peliJatkuu = true;
         this.restart();
     }
-    
+
+    /**
+     * Metodi päivittää pistetilanteen. Jos kaaryle on onnistunut hyppäämään
+     * puolukan yli, annetaan lisäpisteitä.
+     */
     public void lisaaPisteet() {
         pisteet++;
-        
+
         for (Puolukka puolukka : this.puolukat) {
             if (puolukka.haeHahmonX() >= 50 && puolukka.haeHahmonX() <= (50 + vauhti)) {
                 pisteet += 50;
@@ -283,7 +295,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
     /**
      * Luo puolukat alussa peliin.
      *
-     * @param maara kostruktorissa määritelty puolukoiden kokonaismäärä
+     * @param maara konstruktorissa määritelty puolukoiden kokonaismäärä
      */
     public void luoPuolukat(int maara) {
         for (int i = 1; i <= maara; i++) {
@@ -310,15 +322,19 @@ public class Kaarylepeli extends Timer implements ActionListener {
 
     }
 
+    /**
+     * Luo muusit alussa peliin. Muusit luodaan piirtämistä varten.
+     */
     public void luoMuusit() {
         this.muusit.add(new Muusi(0, this.korkeus));
         this.muusit.add(new Muusi(3000, this.korkeus));
     }
 
-    public List<Muusi> haeMuusit() {
-        return this.muusit;
-    }
-
+    /**
+     * Metodin avulla saadaan muusi liikkumaan, jolloin luodaan vaikutelma
+     * juoksevasta Kaaryleesta. Muusin pitää liikkua samaa vauhtia kuin
+     * puolukoiden.
+     */
     public void muusiEtenee() {
         boolean muusiYliReunan = false;
 

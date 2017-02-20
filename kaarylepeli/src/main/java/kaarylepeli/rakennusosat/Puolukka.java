@@ -24,7 +24,7 @@ public class Puolukka extends Hahmo {
 
     /**
      * Metodia kutsutaan konstruktorista, ja se luo uudelle puolukalle osat.
-     * Metodissa annetaan lähtöpisteen x-koordinaatti puolukan sijainti
+     * Metodissa annetaan lähtöpisteen x-koordinaatti, puolukan sijainti
      * y-akselilla riippuu kentän ja muusin korkeudesta. Vakiot asettavat
      * puolukan oikeaan kohtaan.
      *

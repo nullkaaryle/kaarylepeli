@@ -21,7 +21,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private Image kaaryleOikeaJalka;
     private Image kaaryleenHyppyKuva;
     private Image muusinKuva;
-    private Image pokaalinKuva;
+    private Image huippupisteKuva;
     private int juoksujalkaVasen;
     private int juoksujalkaOikea;
 
@@ -41,7 +41,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
         this.kaaryleenHyppyKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleHyppy.png").getImage();
         this.puolukanKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/puolukkaIsompi.png").getImage();
         this.muusinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/muusiPitka.png").getImage();
-        this.pokaalinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/pokaali.png").getImage();
+        this.huippupisteKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/huippupisteet.png").getImage();
     }
 
     /**
@@ -172,7 +172,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", 1, 20));
             g.drawString(pisteteksti + " - UUSI ENNÄTYS!", 20, 30);
-            g.drawImage(pokaalinKuva, kaarylepeli.haeKaaryle().haeHahmonX() + 50, kaarylepeli.haeKaaryle().haeHahmonY() + 20, this);
+            g.drawImage(huippupisteKuva, kaarylepeli.haeKaaryle().haeHahmonX() - 12, kaarylepeli.haeKaaryle().haeHahmonY() + 15, this);
         }
 
     }
