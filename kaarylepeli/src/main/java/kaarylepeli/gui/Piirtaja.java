@@ -77,6 +77,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
      */
     public void piirraTausta(Graphics g) {
         g.drawImage(taustakuva, 0, 0, this);
+        Toolkit.getDefaultToolkit().sync();
     }
 
     /**
@@ -87,6 +88,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
     public void piirraMuusi(Graphics g) {
         for (Muusi muusi : this.kaarylepeli.haeMuusit()) {
             g.drawImage(muusinKuva, muusi.haeHahmonX(), muusi.haeHahmonY(), this);
+            Toolkit.getDefaultToolkit().sync();
         }
 
         //g.drawImage(muusinKuva, 0, (this.korkeus - 65), this);
@@ -100,6 +102,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
     public void piirraPuolukat(Graphics g) {
         for (Puolukka puolukka : this.kaarylepeli.haePuolukat()) {
             g.drawImage(puolukanKuva, puolukka.haeHahmonX(), puolukka.haeHahmonY(), this);
+            Toolkit.getDefaultToolkit().sync();
         }
     }
 
@@ -114,15 +117,17 @@ public class Piirtaja extends JPanel implements Paivitettava {
 
         if (this.kaarylepeli.haeKaaryle().onMaassa() == false) {
             g.drawImage(kaaryleenHyppyKuva, kaaryleenX, kaaryleenY, this);
-
+            Toolkit.getDefaultToolkit().sync();
         } else {
 
             if (this.juoksujalkaVasen <= 1) {
                 g.drawImage(kaaryleVasenJalka, kaaryleenX, kaaryleenY, this);
+                Toolkit.getDefaultToolkit().sync();
                 juoksujalkaVasen++;
 
             } else {
                 g.drawImage(kaaryleOikeaJalka, kaaryleenX, kaaryleenY, this);
+                Toolkit.getDefaultToolkit().sync();
                 juoksujalkaOikea++;
             }
 
@@ -150,7 +155,8 @@ public class Piirtaja extends JPanel implements Paivitettava {
 
         g.setFont(new Font("Arial", 1, 20));
         g.drawString(pisteteksti, 20, 30);
-
+        Toolkit.getDefaultToolkit().sync();
+        
         if (kaarylepeli.peliJatkuu() == false) {
             piirraLopputilanne(g, pisteteksti);
         }
@@ -167,12 +173,15 @@ public class Piirtaja extends JPanel implements Paivitettava {
         g.drawString("Peli päättyi!", leveys / 2 - 150, korkeus / 2);
         g.setFont(new Font("Arial", 1, 23));
         g.drawString("- paina enter ja pelaa uudelleen -", leveys / 2 - 190, korkeus / 2 + 35);
+        Toolkit.getDefaultToolkit().sync();
 
         if (kaarylepeli.tuliEnnatys()) {
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", 1, 20));
             g.drawString(pisteteksti + " - UUSI ENNÄTYS!", 20, 30);
+            Toolkit.getDefaultToolkit().sync();
             g.drawImage(huippupisteKuva, kaarylepeli.haeKaaryle().haeHahmonX() - 12, kaarylepeli.haeKaaryle().haeHahmonY() + 15, this);
+            Toolkit.getDefaultToolkit().sync();
         }
 
     }
