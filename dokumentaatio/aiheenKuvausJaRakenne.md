@@ -23,22 +23,22 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
 
 ####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
-* pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
-* vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
-* oma huomio: pelianimaatiot voisivat olla sujuvampia
+- [ ] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
+- [ ] vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
+- [ ] oma huomio: pelianimaatiot voisivat olla sujuvampia
 
 ####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:####
-- [ ] lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
-- [ ] tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
-- [ ] lisätään parallax-pilvet
+- [x] lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
+- [x] tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
+- [ ] lisätään "parallax-pilvet"
 
-####Pelin mahdollisia laajennuksia jatkossa:####
+####Pelin mahdollisia muita laajennuksia:####
 - [ ] historia: tiedostoon kirjoitus ja kaikkien aikojen huippupisteiden tallentaminen l. HiScore-listan ylläpito
 - [ ] logiikka: lisätään vaikeusasteet (toteutus esim. vauhdin lisäyksellä ja/tai tihenevillä puolukan väleillä
 - [ ] äänitehosteet: hyppy, puolukan ylitys, kuolema, tasa- ja huippupisteet
 - [ ] logiikka, grafiikka: aloitusnäyttö
 - [ ] grafiikka: osuman sattuessa puolukan litistyminen, kääryleen kaatuminen
-- [ ] logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
+- [x] logiikka: pistelaskun tarkennus, ylitetyistä puolukoista lisäpisteitä
 - [ ] logiikka: kääryleelle mahdollisuus tehdä tuplahyppy, eli korkeampi hyppy
 - [ ] logiikka, grafiikka: muutama erikokoinen Puolukka-olio peliin
 - [ ] logiikka: mahdollisuus elämiin, eli peli ei loppuisi ensimmäiseen osumaan
