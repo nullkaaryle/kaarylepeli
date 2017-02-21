@@ -18,4 +18,6 @@ Päivä | Tunnit | Kuvaus
 16.02.2017 | 4.0  h | Opiskelua, koodin parantelua ja testaamista
 17.02.2017 | 10.0 h | Paljon töitä, pistelasku, hypyn parannus, grafiikat ym.
 18.02.2017 | 3.0  h | Lisätty testejä. Pelilogiikan luokka on vaikea testattava! Pohdittu loppupalautusta, demoa ja uusia ominaisuuksia myös kurssin jälkeen toteutettavaksi.
-21.02.2017 | 3.0  h | Lisätty muusin liikkuminen ja kaaryleen juoksu, tuunattu pisteenlaskua, ja muutenkin pohdiskeltu animaatioita.
+20.02.2017 | 3.0  h | Lisätty muusin liikkuminen ja kaaryleen juoksu, tuunattu pisteenlaskua, ja muutenkin pohdiskeltu animaatioita.
+21.02.2017 | 0.5  h | Viime hetken tuunausta ennen demoa.
+21.02.2017 | 1.5  h | Demotilaisuus.
