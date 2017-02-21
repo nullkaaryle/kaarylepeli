@@ -22,6 +22,11 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 ###Pelin toiminnallisuus 5. viikon palautuksessa:###
 Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
 
+####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
+* pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
+* vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
+* oma huomio: pelianimaatiot voisivat olla sujuvampia
+
 ####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:####
 * lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
 * tarkennetaan hahmojen osuminen toisiinsa (määritellään hahmojen Osa-listat hahmon uusia grafiikkoja tukeviksi)
