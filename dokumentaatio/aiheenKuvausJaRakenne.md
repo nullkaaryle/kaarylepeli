@@ -22,6 +22,9 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 ###Pelin toiminnallisuus 5. viikon palautuksessa:###
 Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
 
+###Käyttöohjeet:###
+_to be done_
+
 ####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
 - [ ] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
 - [ ] vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
@@ -46,6 +49,8 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
+###Rakennekuvaus:###
+_to be done_
 
 ###Luokkakaavio:###
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka_20170221.png)
