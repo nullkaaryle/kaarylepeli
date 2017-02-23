@@ -1,10 +1,14 @@
 package kaarylepeli.gui;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.*;
-import kaarylepeli.peli.Kaarylepeli;
-import kaarylepeli.rakennusosat.Muusi;
-import kaarylepeli.rakennusosat.Puolukka;
+import kaarylepeli.peli.*;
+import kaarylepeli.rakennusosat.*;
 
 /**
  * Piirtoalusta, joka piirtää pelin sisällön.
@@ -14,14 +18,14 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private Kaarylepeli kaarylepeli;
     private int leveys;
     private int korkeus;
-    private Image taustakuva;
-    private Image kaaryleenKuva;
-    private Image puolukanKuva;
-    private Image kaaryleVasenJalka;
-    private Image kaaryleOikeaJalka;
-    private Image kaaryleenHyppyKuva;
-    private Image muusinKuva;
-    private Image huippupisteKuva;
+    private BufferedImage taustakuva;
+    private BufferedImage kaaryleenKuva;
+    private BufferedImage puolukanKuva;
+    private BufferedImage kaaryleVasenJalka;
+    private BufferedImage kaaryleOikeaJalka;
+    private BufferedImage kaaryleenHyppyKuva;
+    private BufferedImage huippupisteKuva;
+    private BufferedImage muusinKuva;
     private int juoksujalkaVasen;
     private int juoksujalkaOikea;
 
@@ -30,18 +34,18 @@ public class Piirtaja extends JPanel implements Paivitettava {
      *
      * @param peli Kaarylepeli-luokka parametrina
      */
-    public Piirtaja(Kaarylepeli peli) {
-        this.kaarylepeli = peli;
-        this.leveys = peli.haeKentanLeveys();
-        this.korkeus = peli.haeKentanKorkeus();
-        this.taustakuva = new ImageIcon("src/main/resources/kaarylepelikuvat/tausta.png").getImage();
-        this.kaaryleenKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryle.png").getImage();
-        this.kaaryleOikeaJalka = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleOikeaJalka.png").getImage();
-        this.kaaryleVasenJalka = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleVasenJalka.png").getImage();
-        this.kaaryleenHyppyKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/kaaryleHyppy.png").getImage();
-        this.puolukanKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/puolukkaIsompi.png").getImage();
-        this.muusinKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/muusiPitka.png").getImage();
-        this.huippupisteKuva = new ImageIcon("src/main/resources/kaarylepelikuvat/huippupisteet.png").getImage();
+    public Piirtaja(Kaarylepeli peli) throws IOException {
+            this.kaarylepeli = peli;
+            this.leveys = peli.haeKentanLeveys();
+            this.korkeus = peli.haeKentanKorkeus();
+            this.taustakuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/tausta.png"));
+            this.kaaryleenKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryle.png"));
+            this.kaaryleOikeaJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleOikeaJalka.png"));
+            this.kaaryleVasenJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleVasenJalka.png"));
+            this.kaaryleenHyppyKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleHyppy.png"));
+            this.puolukanKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/puolukkaIsompi.png"));
+            this.muusinKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/muusi.png"));
+            this.huippupisteKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/huippupisteet.png"));
     }
 
     /**
@@ -156,7 +160,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
         g.setFont(new Font("Arial", 1, 20));
         g.drawString(pisteteksti, 20, 30);
         Toolkit.getDefaultToolkit().sync();
-        
+
         if (kaarylepeli.peliJatkuu() == false) {
             piirraLopputilanne(g, pisteteksti);
         }

@@ -27,7 +27,7 @@ public class KaaryleTest {
     @Test
     public void kaaryleessaOikeaMaaraOsia() {
         int kaaryleenOsia = kaaryle.haeOsat().size();
-        assertEquals(kaaryleenOsia, 5000);
+        assertEquals(kaaryleenOsia, 3750);
     }
 
     @Test

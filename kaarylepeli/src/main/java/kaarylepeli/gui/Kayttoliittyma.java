@@ -1,6 +1,9 @@
 package kaarylepeli.gui;
 
 import java.awt.Container;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 import kaarylepeli.peli.Kaarylepeli;
 import kaarylepeli.rakennusosat.Kaaryle;
@@ -49,7 +52,8 @@ public class Kayttoliittyma implements Runnable {
     }
 
     /**
-     * Luo ja asettaa kehyksen eli pelin näkyväksi.
+     * Luo ja asettaa kehyksen eli pelin näkyväksi. Kuvatiedostojen lukijan
+     * mahdollisesti heittämät virheet napataan tässä.
      */
     @Override
     public void run() {
@@ -57,7 +61,14 @@ public class Kayttoliittyma implements Runnable {
         kehys.setSize(this.kaarylepeli.haeKentanLeveys(), this.kaarylepeli.haeKentanKorkeus());
         kehys.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         kehys.setResizable(false);
-        luoKomponentit(kehys.getContentPane());
+
+        try {
+            luoKomponentit(kehys.getContentPane());
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Ongelma pelikomponenttien luomisessa.", "Virheilmoitus", JOptionPane.ERROR_MESSAGE);
+            Logger.getLogger(Piirtaja.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         kehys.setVisible(true);
     }
 
@@ -66,7 +77,7 @@ public class Kayttoliittyma implements Runnable {
      *
      * @param sisaltaja Container-olio
      */
-    public void luoKomponentit(Container sisaltaja) {
+    public void luoKomponentit(Container sisaltaja) throws IOException {
         this.piirtaja = new Piirtaja(this.kaarylepeli);
         sisaltaja.add(piirtaja);
         Kuuntelija kuuntelija = new Kuuntelija(this.kaarylepeli);

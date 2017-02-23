@@ -41,7 +41,7 @@ public class Kaaryle extends Hahmo {
      * Metodin avulla voidaan tarkistaa, voiko seuraava hyppy alkaa.
      *
      * @return palauttaa true jos Kaaryle ei ole hyppäämässä, false jos jalat
-     * ovat ilamssa
+     * ovat ilmassa
      */
     public boolean onMaassa() {
         return this.onMaassa;

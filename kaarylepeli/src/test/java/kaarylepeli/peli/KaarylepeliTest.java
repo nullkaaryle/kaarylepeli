@@ -1,5 +1,6 @@
 package kaarylepeli.peli;
 
+import java.io.IOException;
 import kaarylepeli.gui.Paivitettava;
 import kaarylepeli.gui.Piirtaja;
 import kaarylepeli.rakennusosat.Osa;
@@ -98,7 +99,7 @@ public class KaarylepeliTest {
     }
 
     @Test
-    public void paivitettavanAsetusToimii() {
+    public void paivitettavanAsetusToimii() throws IOException {
         Piirtaja paivi = new Piirtaja(peli);
         peli.asetaPaivitettava(paivi);
         assertNotNull(peli.haePaivitettava());
@@ -141,7 +142,7 @@ public class KaarylepeliTest {
 
     @Test
     public void josAloitetaanUusiPeliPuolukoitaOnViisi() {
-        peli.lisaaPuolukka();
+      //  peli.lisaaPuolukka();
         peli.aloitaUusiPeli();
         assertEquals(peli.haePuolukat().size(), 5);
     }

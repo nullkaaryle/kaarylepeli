@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import javax.swing.*;
-import kaarylepeli.gui.Kayttoliittyma;
-import kaarylepeli.gui.Paivitettava;
-import kaarylepeli.gui.Piirtaja;
+import kaarylepeli.gui.*;
 import kaarylepeli.rakennusosat.*;
 
 /**
@@ -26,6 +24,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
     private List<Muusi> muusit;
     private Paivitettava paivitettava;
     private int vauhti;
+    private int puolukanVali;
 
     /**
      * Kaarylepeli-luokan konstruktori. Kutsuu myös Timer-luokan konstruktoria.
@@ -35,6 +34,8 @@ public class Kaarylepeli extends Timer implements ActionListener {
         addActionListener(this);
         setInitialDelay(1000);
         this.paivitettava = null;
+        this.puolukanVali = 500;
+
         this.leveys = 1000;
         this.korkeus = 300;
         this.kaaryle = new Kaaryle();
@@ -159,7 +160,6 @@ public class Kaarylepeli extends Timer implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent kello) {
-
         if (peliJatkuu == false) {
             this.stop();
             return;
@@ -170,20 +170,26 @@ public class Kaarylepeli extends Timer implements ActionListener {
         puolukatVyoryvat();
         lisaaPisteet();
         tarkistaOsumat();
+        tarkistaVaikeustaso();
         this.paivitettava.paivita();
         this.setDelay(50);
+
     }
 
     /**
-     * Metodin avulla asetetaan Hahmot ja pisteet huippupisteitä lukuunottamatta
-     * alkutilaan.
+     * Metodin avulla asetetaan kaiken huippupisteitä lukuunottamatta
+     * alkutilaan. Muusia ei tarvitse alustaa.
      */
     public void aloitaUusiPeli() {
         this.ennatys = false;
         this.pisteet = 0;
         this.puolukat.clear();
+        this.puolukanVali = 500;
         luoPuolukat(5);
+        this.muusit.clear();
+        luoMuusit();
         this.kaaryle = new Kaaryle();
+        this.vauhti = 12;
         this.peliJatkuu = true;
         this.restart();
     }
@@ -225,6 +231,20 @@ public class Kaarylepeli extends Timer implements ActionListener {
                 tallennaHuippupisteet(this.pisteet);
 
             }
+        }
+    }
+
+    /**
+     * Vaikeustasoa lisätään pisteiden mukaan puolukoiden väliä lyhentämällä
+     * sekä pelin vauhtia lisäämällä.
+     */
+    public void tarkistaVaikeustaso() {
+        if (this.pisteet % 500 == 0) {
+            this.vauhti++;
+        }
+
+        if (this.pisteet % 100 == 0 && this.puolukanVali > 100) {
+            this.puolukanVali -= 100;
         }
     }
 
@@ -310,7 +330,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
      */
     public void lisaaPuolukka() {
         Random arpoja = new Random();
-        int vali = 150 + arpoja.nextInt(500);
+        int vali = 150 + arpoja.nextInt(this.puolukanVali);
         int edellisenPuolukanX = this.leveys;
 
         if (!this.puolukat.isEmpty()) {
