@@ -21,3 +21,5 @@ Päivä | Tunnit | Kuvaus
 20.02.2017 | 3.0  h | Lisätty muusin liikkuminen ja kaaryleen juoksu, tuunattu pisteenlaskua, ja muutenkin pohdiskeltu animaatioita.
 21.02.2017 | 0.5  h | Viime hetken tuunausta ennen demoa.
 21.02.2017 | 1.5  h | Demotilaisuus.
+23.02.2017 | 5.0  h | Vaikeusasteen kasvu lisätty. Pelisilmukan tuunausta ja opiskelua.
+24.02.2017 | 10.0 h | Pääpaino testauksella. Kaarypeli-luokan testit jaettu yhteenkuuluviin kokonaisuuksiin. Luotu käyttöohjeet tekstinä ja kuvina sekä tarkennettu rakennekuvausta. Tehty myös pilvien grafiikat ja sunniteltu pilviluokan rakennetta.
