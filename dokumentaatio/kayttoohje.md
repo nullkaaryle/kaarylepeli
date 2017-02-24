@@ -1,6 +1,6 @@
 #Käärylepelin käyttö-ohjeet#
 
-* * * 
+
 
 Peli alkaa automaattisesti avaamisen jälkeen.
 
