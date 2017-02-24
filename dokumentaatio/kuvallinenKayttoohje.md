@@ -13,17 +13,17 @@ Peli alkaa automaattisesti avaamisen jälkeen.
 
 ##Pelitaktiikka:##
 
-![Viholliset](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohjeet/ohjeViholliset.png)
+![Viholliset](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoOhjeKuvat/ohjeViholliset.png)
 
 * * *
 
 ##Pelin tavoite:##
-![Voittaminen](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohjeet/ohjeVoittaminen.png)
+![Voittaminen](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoOhjeKuvat/ohjeVoittaminen.png)
 
 * * *
 
 ##Uuden pelin aloittaminen:##
 
-![UusiPeli](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohjeet/ohjeUusiPeli.png)
+![UusiPeli](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoOhjeKuvat/ohjeUusiPeli.png)
 
 * * *
