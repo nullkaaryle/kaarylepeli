@@ -1,4 +1,4 @@
-#Käärylepelin käyttö-ohjeet#
+#Käärylepelin käyttöohjeet#
 
 
 
