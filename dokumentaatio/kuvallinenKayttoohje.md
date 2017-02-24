@@ -7,7 +7,7 @@ Peli alkaa automaattisesti avaamisen jälkeen.
 
 ##Liikkuminen pelissä:##
 
-![Liikkuminen](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohjeet/ohjeLiikkuminen.png)
+![Liikkuminen](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoOhjeKuvat/ohjeLiikkuminen.png)
 
 * * *
 
