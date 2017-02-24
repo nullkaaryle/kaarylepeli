@@ -36,4 +36,10 @@ public class OsaTest {
         assertTrue(osa.osuu(toinenOsa));
     }
 
+    @Test
+    public void josOsatEivatPaallekkainPalauttaaEpatoden() {
+        Osa toinenOsa = new Osa(20, 20);
+        assertEquals(false, osa.osuu(toinenOsa));
+    }
+
 }

@@ -76,6 +76,7 @@ public class Kayttoliittyma implements Runnable {
      * Metodi luo käyttöliittymäkomponentit Piirtaja ja Kuuntelija.
      *
      * @param sisaltaja Container-olio
+     * @throws IOException heittaa poikkeuksen eteenpain run()-metodille
      */
     public void luoKomponentit(Container sisaltaja) throws IOException {
         this.piirtaja = new Piirtaja(this.kaarylepeli);

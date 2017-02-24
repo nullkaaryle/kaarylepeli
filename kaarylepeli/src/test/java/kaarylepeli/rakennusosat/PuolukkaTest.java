@@ -70,10 +70,17 @@ public class PuolukkaTest {
         Osa kulma = puolukka.haeVasenYlakulma();
         assertEquals(kulma.haeOsanX(), 970);
     }
-    
+
     @Test
     public void haeSuuntaToimii() {
         assertEquals(puolukka.haeSuunta(), Suunta.VASEN);
+    }
+
+    @Test
+    public void LiikkuuOikeanMaaran() {
+        puolukka.asetaSuunta(Suunta.OIKEA);
+        puolukka.liiku(20);
+        assertEquals(puolukka.haeHahmonX(), 120);
     }
 
 }

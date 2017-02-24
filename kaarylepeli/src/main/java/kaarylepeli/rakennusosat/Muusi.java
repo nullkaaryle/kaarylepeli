@@ -8,6 +8,9 @@ public class Muusi extends Hahmo {
     /**
      * Konstruktori kutsuu Hahmo-luokan konstruktoria. luoMuusi()-metodia
      * kutsutaan konstruktorista.
+     *
+     * @param lahtopisteX lahtopisteen x-koordinaatti kokonaislukuna
+     * @param kentanKorkeus pelikentan korkeus kokonaislukuna
      */
     public Muusi(int lahtopisteX, int kentanKorkeus) {
         super();

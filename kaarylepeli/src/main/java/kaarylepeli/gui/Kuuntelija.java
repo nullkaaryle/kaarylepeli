@@ -35,15 +35,14 @@ public class Kuuntelija implements KeyListener {
             }
         }
 
-        if (e.getKeyCode() == KeyEvent.VK_ENTER && this.kaarylepeli.peliJatkuu() == false) {
+        if (this.kaarylepeli.peliJatkuu() == false && e.getKeyCode() == KeyEvent.VK_ENTER) {
             this.kaarylepeli.aloitaUusiPeli();
         }
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        //ei tueta (ainakaan aluksi)
+        //ei tueta
     }
 
     @Override

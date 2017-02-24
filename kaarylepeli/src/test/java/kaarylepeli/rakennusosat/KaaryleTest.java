@@ -128,14 +128,24 @@ public class KaaryleTest {
     }
 
     @Test
-    public void hyppyarvoOnLakipisteessa() {
+    public void hyppyarvoOnLopussa() {
+        kaaryle.hyppaaIlmaan();
+        kaaryle.kasvataHyppyarvoa(139);
+        assertTrue(kaaryle.onMaassa());
+    }
+
+    @Test
+    public void hyppyarvoOnYliLopun() {
+        kaaryle.hyppaaIlmaan();
         kaaryle.kasvataHyppyarvoa(140);
         assertTrue(kaaryle.onMaassa());
     }
 
     @Test
-    public void hyppyarvoOnYliLakipisteen() {
-        kaaryle.kasvataHyppyarvoa(141);
-        assertTrue(kaaryle.onMaassa());
+    public void hyppyarvoEiVielaLopussa() {
+        kaaryle.hyppaaIlmaan();
+        kaaryle.kasvataHyppyarvoa(138);
+        assertFalse(kaaryle.onMaassa());
     }
+
 }

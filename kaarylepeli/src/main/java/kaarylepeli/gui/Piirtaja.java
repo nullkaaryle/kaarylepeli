@@ -3,8 +3,6 @@ package kaarylepeli.gui;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import kaarylepeli.peli.*;
@@ -30,22 +28,25 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private int juoksujalkaOikea;
 
     /**
-     * Piirtaja-luokan konstruktori.
+     * Piirtaja-luokan konstruktori, jolle peli annetaan parametrina.
      *
-     * @param peli Kaarylepeli-luokka parametrina
+     * @param peli Kaarylepeli-luokan olio
+     *
+     * @throws IOException heittää poikkeuksen eteenpäin Kayttoliittyman
+     * luoKomponentit() -metodille
      */
     public Piirtaja(Kaarylepeli peli) throws IOException {
-            this.kaarylepeli = peli;
-            this.leveys = peli.haeKentanLeveys();
-            this.korkeus = peli.haeKentanKorkeus();
-            this.taustakuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/tausta.png"));
-            this.kaaryleenKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryle.png"));
-            this.kaaryleOikeaJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleOikeaJalka.png"));
-            this.kaaryleVasenJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleVasenJalka.png"));
-            this.kaaryleenHyppyKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleHyppy.png"));
-            this.puolukanKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/puolukkaIsompi.png"));
-            this.muusinKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/muusi.png"));
-            this.huippupisteKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/huippupisteet.png"));
+        this.kaarylepeli = peli;
+        this.leveys = peli.haeKentanLeveys();
+        this.korkeus = peli.haeKentanKorkeus();
+        this.taustakuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/tausta.png"));
+        this.kaaryleenKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryle.png"));
+        this.kaaryleOikeaJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleOikeaJalka.png"));
+        this.kaaryleVasenJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleVasenJalka.png"));
+        this.kaaryleenHyppyKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleHyppy.png"));
+        this.puolukanKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/puolukkaIsompi.png"));
+        this.muusinKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/muusi.png"));
+        this.huippupisteKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/huippupisteet.png"));
     }
 
     /**
@@ -94,8 +95,6 @@ public class Piirtaja extends JPanel implements Paivitettava {
             g.drawImage(muusinKuva, muusi.haeHahmonX(), muusi.haeHahmonY(), this);
             Toolkit.getDefaultToolkit().sync();
         }
-
-        //g.drawImage(muusinKuva, 0, (this.korkeus - 65), this);
     }
 
     /**
@@ -151,7 +150,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
      */
     public void piirraPisteet(Graphics g) {
         String pisteteksti = "Pisteet: " + String.valueOf(kaarylepeli.haePisteet());
-        g.setColor(Color.WHITE);
+        g.setColor(Color.DARK_GRAY);
 
         if (kaarylepeli.haePisteet() > kaarylepeli.haeHuippupisteet() && kaarylepeli.haeHuippupisteet() != 0) {
             g.setColor(Color.YELLOW);
@@ -173,19 +172,17 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * @param pisteteksti pisteteksti String-muodosaa
      */
     public void piirraLopputilanne(Graphics g, String pisteteksti) {
+        g.setColor(Color.DARK_GRAY);
         g.setFont(new Font("Arial", 1, 50));
         g.drawString("Peli päättyi!", leveys / 2 - 150, korkeus / 2);
         g.setFont(new Font("Arial", 1, 23));
-        g.drawString("- paina enter ja pelaa uudelleen -", leveys / 2 - 190, korkeus / 2 + 35);
-        Toolkit.getDefaultToolkit().sync();
+        g.drawString("- paina enter ja pelaa uudelleen -", leveys / 2 - 185, korkeus / 2 + 35);
 
         if (kaarylepeli.tuliEnnatys()) {
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", 1, 20));
             g.drawString(pisteteksti + " - UUSI ENNÄTYS!", 20, 30);
-            Toolkit.getDefaultToolkit().sync();
             g.drawImage(huippupisteKuva, kaarylepeli.haeKaaryle().haeHahmonX() - 12, kaarylepeli.haeKaaryle().haeHahmonY() + 15, this);
-            Toolkit.getDefaultToolkit().sync();
         }
 
     }
