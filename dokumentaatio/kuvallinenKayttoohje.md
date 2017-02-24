@@ -4,6 +4,7 @@
 
 Peli alkaa automaattisesti avaamisen jälkeen.
 
+* * *
 
 ##Liikkuminen pelissä:##
 
