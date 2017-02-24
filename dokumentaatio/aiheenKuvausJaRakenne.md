@@ -31,7 +31,7 @@ Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle u
 ##Pelin toiminnallisuus sekä kehitysideat##
 
 ###Pelin toiminnallisuus 6. viikon palautuksessa:###
-Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain. Pelin vaikeustaso
+Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain. Pelin vaikeustaso kasvaa hiljalleen.
 
 ####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
 - [x] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
