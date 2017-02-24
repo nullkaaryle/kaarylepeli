@@ -5,7 +5,7 @@ Ohjelmoinnin harjoitustyö 2017.
 
 * [Dokumentaatio](https://github.com/nullkaaryle/kaarylepeli/tree/master/dokumentaatio)
   * [Aiheen kuvaus ja rakenne](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)
-  * [Pelin käyttöohjeet](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohje.md)
+  * [Pelin käyttöohjeet](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kuvallinenKayttoohje.md)
   * [Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_pysty_20170221.png)
   * [PIT-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/pit/index.html)
   * [CheckStyle-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/checkstyle/checkstyle.html)
