@@ -22,7 +22,7 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 
 ##Käyttöohjeet:##
 
-###[Katso kuvitettu käyttöohje!](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohje.md)####
+###[Katso kuvitettu käyttöohje!](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kuvallinenKayttoohje.md)####
 
 Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle upottavassa perunamuussissa. Hyppää vastaantulevien äkäisten puolukoiden yli välilyönnillä tai ylöspäin-nuolinäppäimellä. Peli päättyy jos osut puolukkaan, mutta voit aloittaa aina uuden pelin painamalla Enter-näppäintä. Seuraa pisteitä vasemmasta yläkulmasta, jos pisteet muuttuvat keltaiseksi olet tekemässä oman ennätyksesi! 
 
@@ -36,7 +36,7 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 ####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
 - [x] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
 - [x] vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
-- [x] oma huomio: pelianimaatiot voisivat olla sujuvampia _tutkittu, ei löydettävissä välitöntä ratkaisua nykyisellä rakenteella_
+- [x] oma huomio: pelianimaatiot voisivat olla sujuvampia _tutkittu, ei löydettävissä välitöntä hyvää ratkaisua nykyisellä rakenteella, jatketaan tutkimista_
 
 ####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:####
 - [x] lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
