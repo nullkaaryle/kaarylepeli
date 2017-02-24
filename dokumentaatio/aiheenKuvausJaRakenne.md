@@ -1,5 +1,7 @@
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
+##Aiheen kuvaus:##
+
 ###Aihe:###
 Käärylepeli
 
@@ -18,17 +20,21 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
+##Käyttöohjeet:##
 
-###Pelin toiminnallisuus 5. viikon palautuksessa:###
-Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain.
+###[Katso kuvitettu käyttöohje!](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohje.md)####
 
-###Käyttöohjeet:###
-_to be done_
+Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle upottavassa perunamuussissa. Hyppää vastaantulevien äkäisten puolukoiden yli välilyönnillä tai ylöspäin-nuolinäppäimellä. Peli päättyy jos osut puolukkaan, mutta voit aloittaa aina uuden pelin painamalla Enter-näppäintä. Seuraa pisteitä vasemmasta yläkulmasta, jos pisteet muuttuvat keltaiseksi olet tekemässä oman ennätyksesi! 
+
+##Pelin toiminnallisuus sekä kehitysideat##
+
+###Pelin toiminnallisuus 6. viikon palautuksessa:###
+Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäimellä. Uuden pelin voi aloittaa osuman jälkeen ENTER-painikkeella. Peliruutu täytyy itse sulkea. Huippupisteet tallentuvat pelisessioittain. Pelin vaikeustaso
 
 ####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
-- [ ] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
-- [ ] vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
-- [ ] oma huomio: pelianimaatiot voisivat olla sujuvampia
+- [x] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
+- [x] vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
+- [x] oma huomio: pelianimaatiot voisivat olla sujuvampia _tutkittu, ei löydettävissä välitöntä ratkaisua nykyisellä rakenteella_
 
 ####Arvio peliin kurssin loppupalautukseen mennessä lisättävistä ominaisuuksista:####
 - [x] lisätään perunamuusin ja kaalikääryleen elävöittävät liikkeet, jotta pelin alkuperäinen idea toteutuu (eli pelissä kaalikääryle juoksee, ja puolukat pysyvät paikallaan)
@@ -37,7 +43,7 @@ _to be done_
 
 ####Pelin mahdollisia muita laajennuksia:####
 - [ ] historia: tiedostoon kirjoitus ja kaikkien aikojen huippupisteiden tallentaminen l. HiScore-listan ylläpito
-- [ ] logiikka: lisätään vaikeusasteet (toteutus esim. vauhdin lisäyksellä ja/tai tihenevillä puolukan väleillä
+- [x] logiikka: lisätään vaikeusasteet (toteutus esim. vauhdin lisäyksellä ja/tai tihenevillä puolukan väleillä
 - [ ] äänitehosteet: hyppy, puolukan ylitys, kuolema, tasa- ja huippupisteet
 - [ ] logiikka, grafiikka: aloitusnäyttö
 - [ ] grafiikka: osuman sattuessa puolukan litistyminen, kääryleen kaatuminen
@@ -49,7 +55,7 @@ _to be done_
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-###Rakennekuvaus:###
+##Rakennekuvaus:##
 _to be done_
 
 ###Luokkakaavio:###
