@@ -5,10 +5,11 @@ Ohjelmoinnin harjoitustyö 2017.
 
 * [Dokumentaatio](https://github.com/nullkaaryle/kaarylepeli/tree/master/dokumentaatio)
   * [Aiheen kuvaus ja rakenne](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)
-  * [Tuntikirjanpito](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/tuntikirjanpito.md)
+  * [Pelin käyttöohjeet](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoohjeet.md)
   * [Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_pysty_20170221.png)
-  * [PIT-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/pit/201702181300/index.html)
+  * [PIT-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/pit/index.html)
   * [CheckStyle-raportti](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/checkstyle/checkstyle.html)
+  * [Tuntikirjanpito](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 ![Kääryle](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/kaaryle.png)
 * * *
