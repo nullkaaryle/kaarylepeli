@@ -60,17 +60,17 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 ##Rakennekuvaus:##
 Pelissä on yhteensä 12 luokkaa. Luokat on jaettu yhteenkuuluviin kokonaisuuksiin neljään pakettiin:
 
-* kaarylepeli
+* **kaarylepeli**
 Sisältää pelin pääohjelman, Main-luokan. Tässä luokassa luodaan uusi Kaarylepeli-olio ja Kayttoliittyma-olio sekä käynnistetään peli.
 
-* kaarylepeli.rakennusosat
+* **kaarylepeli.rakennusosat**
 Rakennusosat- paketti sisältää pelihahmojen luokat Kaaryle, Puolukka ja Muusi sekä luokat Osa ja Hahmo. Lisäksi paketissa on luetelty tyyppi (enum) Suunta. Kaaryle-, Puolukka- ja Muusi-luokat perivät abstraktin luokan Hahmo. Hahmo-luokan oliot hyödyntävät Osa-luokkaa, eli hahmot koostuvat Osista. Hahmon sisältämät Osat tallennetaan ArrayList-listaan. Enum Suunta on apuna Hahmon suunan vaihtamista varten.
 
 
-* kaarylepeli.gui
+* **kaarylepeli.gui**
 Paketti sisältää luokan Kayttoliittyma. Käyttöliittymä-luokassa luodaan kehys ja pelin komponentit. Lisäksi paketissa näppäimistönkuuntelijaluokka Kuuntelija, Piirtaja-piirtoalusta sekä rajapinta Paivitettava. Paivitettava-rajapintaa hyödynnetään Piirtaja-luokassa, joka piirtää pelin sisällön.
 
-* kaarylepeli.peli
+* **kaarylepeli.peli**
 Paketissa on yksi luokka: Kaarylepeli. Tämä luokka perii Timer-luokan ja toteuttaa sen myötä ActionListenerin. Luokka sisältää pelin logiikan ja pelisilmukan. Luokassa luodaan pelihahmot (kääryle ja puolukat sekä muusit). Pelisilmukka käynnistyy ajastettuna ja sen sisällä piirretään peliruutu, liikutetaan pelihahmoja sekä tarkistetaan pelin päättymisehdot sekä pistetilanne.
 
 * * *
