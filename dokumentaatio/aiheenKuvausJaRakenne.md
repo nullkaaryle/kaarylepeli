@@ -26,6 +26,8 @@ Pelihahmona on kaalikääryle ja vihollisia ovat puolukat. Pelikenttänä toimii
 
 Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle upottavassa perunamuussissa. Hyppää vastaantulevien äkäisten puolukoiden yli välilyönnillä tai ylöspäin-nuolinäppäimellä. Peli päättyy jos osut puolukkaan, mutta voit aloittaa aina uuden pelin painamalla Enter-näppäintä. Seuraa pisteitä vasemmasta yläkulmasta, jos pisteet muuttuvat keltaiseksi olet tekemässä oman ennätyksesi! 
 
+![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
+
 ##Pelin toiminnallisuus sekä kehitysideat##
 
 ###Pelin toiminnallisuus 6. viikon palautuksessa:###
@@ -56,7 +58,22 @@ Peliä voi pelata. Kääryle hyppää SPACE-painikkeella tai YLÖS-nuolinäppäi
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
 ##Rakennekuvaus:##
-_to be done_
+Pelissä on yhteensä 12 luokkaa. Luokat on jaettu yhteenkuuluviin kokonaisuuksiin neljään pakettiin:
+
+* kaarylepeli
+Sisältää pelin pääohjelman, Main-luokan. Tässä luokassa luodaan uusi Kaarylepeli-olio ja Kayttoliittyma-olio sekä käynnistetään peli.
+
+* kaarylepeli.rakennusosat
+Rakennusosat- paketti sisältää pelihahmojen luokat Kaaryle, Puolukka ja Muusi sekä luokat Osa ja Hahmo. Lisäksi paketissa on luetelty tyyppi (enum) Suunta. Kaaryle-, Puolukka- ja Muusi-luokat perivät abstraktin luokan Hahmo. Hahmo-luokan oliot hyödyntävät Osa-luokkaa, eli hahmot koostuvat Osista. Hahmon sisältämät Osat tallennetaan ArrayList-listaan. Enum Suunta on apuna Hahmon suunan vaihtamista varten.
+
+
+* kaarylepeli.gui
+Paketti sisältää luokan Kayttoliittyma. Käyttöliittymä-luokassa luodaan kehys ja pelin komponentit. Lisäksi paketissa näppäimistönkuuntelijaluokka Kuuntelija, Piirtaja-piirtoalusta sekä rajapinta Paivitettava. Paivitettava-rajapintaa hyödynnetään Piirtaja-luokassa, joka piirtää pelin sisällön.
+
+* kaarylepeli.peli
+Paketissa on yksi luokka: Kaarylepeli. Tämä luokka perii Timer-luokan ja toteuttaa sen myötä ActionListenerin. Luokka sisältää pelin logiikan ja pelisilmukan. Luokassa luodaan pelihahmot (kääryle ja puolukat sekä muusit). Pelisilmukka käynnistyy ajastettuna ja sen sisällä piirretään peliruutu, liikutetaan pelihahmoja sekä tarkistetaan pelin päättymisehdot sekä pistetilanne.
+
+* * *
 
 ###Luokkakaavio:###
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka_20170221.png)
