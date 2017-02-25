@@ -12,7 +12,7 @@ Peli alkaa automaattisesti avaamisen jälkeen.
 
 * * *
 
-##Pelitaktiikka:##
+##Peli-idea:##
 
 ![Viholliset](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoOhjeKuvat/ohjeViholliset.png)
 
