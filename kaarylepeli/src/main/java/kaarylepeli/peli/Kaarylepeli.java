@@ -24,6 +24,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
     private List<Puolukka> puolukat;
     private int puolukanvali;
     private List<Muusi> muusit;
+    private List<Pilvi> pilvet;
     private int pisteet;
     private int huippupisteet;
     private boolean ennatys;
@@ -44,8 +45,10 @@ public class Kaarylepeli extends Timer implements ActionListener {
         this.puolukat = new ArrayList<>();
         this.puolukanvali = 500;
         this.muusit = new ArrayList<>();
+        this.pilvet = new ArrayList<>();
         luoPuolukat(5);
         luoMuusit();
+        luoPilvet();
         this.pisteet = 0;
         this.huippupisteet = 0;
         this.ennatys = false;
@@ -64,7 +67,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
             this.stop();
             return;
         }
-
+        pilvetLipuvat();
         muusiEtenee();
         kaaryleenHyppy();
         puolukatVyoryvat();
@@ -392,4 +395,42 @@ public class Kaarylepeli extends Timer implements ActionListener {
         }
 
     }
+
+    public void luoPilvet() {
+        this.pilvet.add(new Pilvi(Pilvityyppi.PIENI));
+        this.pilvet.add(new Pilvi(Pilvityyppi.KESKI));
+        this.pilvet.add(new Pilvi(Pilvityyppi.ISO));
+        this.pilvet.add(new Pilvi(Pilvityyppi.JATTI));
+    }
+
+    public void pilvetLipuvat() {
+        boolean pilviLapiTaivaan = false;
+        List<Pilvi> haihtuneet = new ArrayList<>();
+        
+        for (Pilvi pilvi : this.pilvet) {
+            pilvi.liiku(pilvi.haeVauhti());
+
+            if (pilvi.haeHahmonX() < -100) {
+                pilviLapiTaivaan = true;
+                haihtuneet.add(pilvi);
+            }
+        }
+
+        if (pilviLapiTaivaan == true) {
+            
+            for (int i = 0; i < haihtuneet.size(); i++) {
+                Pilvi haihtunut = haihtuneet.get(i);
+                this.pilvet.add(new Pilvi(haihtunut.haePilvityyppi()));
+                this.pilvet.remove(haihtunut);
+            }
+        }
+    }
+    
+    public List<Pilvi> haePilvet() {
+        return this.pilvet;
+    }
+
+    
+    
+    
 }

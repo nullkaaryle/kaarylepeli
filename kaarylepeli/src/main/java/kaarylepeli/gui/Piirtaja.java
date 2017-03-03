@@ -24,6 +24,10 @@ public class Piirtaja extends JPanel implements Paivitettava {
     private BufferedImage kaaryleenHyppyKuva;
     private BufferedImage huippupisteKuva;
     private BufferedImage muusinKuva;
+    private BufferedImage pilviPieni;
+    private BufferedImage pilviKeski;
+    private BufferedImage pilviIso;
+    private BufferedImage pilviJatti;
     private int juoksujalkaVasen;
     private int juoksujalkaOikea;
 
@@ -39,13 +43,17 @@ public class Piirtaja extends JPanel implements Paivitettava {
         this.kaarylepeli = peli;
         this.leveys = peli.haeKentanLeveys();
         this.korkeus = peli.haeKentanKorkeus();
-        this.taustakuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/tausta.png"));
+        this.taustakuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/taustaPilveton.png"));
         this.kaaryleenKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryle.png"));
         this.kaaryleOikeaJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleOikeaJalka.png"));
         this.kaaryleVasenJalka = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleVasenJalka.png"));
         this.kaaryleenHyppyKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/kaaryleHyppy.png"));
         this.puolukanKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/puolukkaIsompi.png"));
         this.muusinKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/muusi.png"));
+        this.pilviPieni = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/pilviPieni.png"));
+        this.pilviKeski = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/pilviKeski.png"));
+        this.pilviIso = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/pilviIso.png"));
+        this.pilviJatti = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/pilviJatti.png"));
         this.huippupisteKuva = ImageIO.read(getClass().getClassLoader().getResourceAsStream("kaarylepelikuvat/huippupisteet.png"));
     }
 
@@ -69,6 +77,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
         Graphics2D graf2d = (Graphics2D) g;
         graf2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         piirraTausta(graf2d);
+        piirraPilvet(graf2d);
         piirraMuusi(graf2d);
         piirraPuolukat(graf2d);
         piirraKaaryle(graf2d);
@@ -83,6 +92,32 @@ public class Piirtaja extends JPanel implements Paivitettava {
     public void piirraTausta(Graphics g) {
         g.drawImage(taustakuva, 0, 0, this);
         Toolkit.getDefaultToolkit().sync();
+    }
+
+    public void piirraPilvet(Graphics g) {
+        for (Pilvi pilvi : this.kaarylepeli.haePilvet()) {
+            
+            Pilvityyppi pilvityyppi = pilvi.haePilvityyppi();
+            BufferedImage pilvenKuva = null;
+            
+            if (pilvityyppi == Pilvityyppi.PIENI) {
+                pilvenKuva = this.pilviPieni;
+            }
+            
+            if (pilvityyppi == Pilvityyppi.KESKI) {
+                pilvenKuva = this.pilviKeski;
+            }    
+            
+            if (pilvityyppi == Pilvityyppi.ISO) {
+                pilvenKuva = this.pilviIso;
+            }
+            if (pilvityyppi == Pilvityyppi.JATTI) {
+                pilvenKuva = this.pilviIso;
+            }
+            
+            g.drawImage(pilvenKuva, pilvi.haeHahmonX(), pilvi.haeHahmonY(), this);
+            Toolkit.getDefaultToolkit().sync();
+        }
     }
 
     /**
