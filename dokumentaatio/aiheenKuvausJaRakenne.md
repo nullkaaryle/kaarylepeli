@@ -61,7 +61,7 @@ Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle u
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-##Rakennekuvaus:##
+##Rakennekuvaus ja kaaviot:##
 Pelissä on yhteensä 15 luokkaa. Luokat on jaettu yhteenkuuluviin kokonaisuuksiin neljään pakettiin:
 
 * **kaarylepeli**
