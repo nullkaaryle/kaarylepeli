@@ -4,8 +4,6 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 import kaarylepeli.gui.*;
 import kaarylepeli.rakennusosat.*;
@@ -21,13 +19,11 @@ public class Kaarylepeli extends Timer implements ActionListener {
     private boolean peliJatkuu;
     private int vauhti;
     private Kaaryle kaaryle;
-    private List<Puolukka> puolukat;
+    private List<Hahmo> puolukat;
     private int puolukanvali;
+    private Pisteenlaskija pisteenlaskija;
     private List<Muusi> muusit;
     private List<Pilvi> pilvet;
-    private int pisteet;
-    private int huippupisteet;
-    private boolean ennatys;
 
     /**
      * Kaarylepeli-luokan konstruktori. Kutsuu myös Timer-luokan konstruktoria.
@@ -49,9 +45,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
         luoPuolukat(5);
         luoMuusit();
         luoPilvet();
-        this.pisteet = 0;
-        this.huippupisteet = 0;
-        this.ennatys = false;
+        this.pisteenlaskija = new Pisteenlaskija();
     }
 
     /**
@@ -72,7 +66,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
         muusiEtenee();
         kaaryleenHyppy();
         puolukatVyoryvat();
-        lisaaPisteet();
+        pisteenlaskija.lisaaPisteet(puolukat, vauhti);
         tarkistaOsumat();
         tarkistaVaikeustaso();
         this.setDelay(50);
@@ -83,8 +77,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
      * alkutilaan.
      */
     public void aloitaUusiPeli() {
-        this.ennatys = false;
-        this.pisteet = 0;
+        pisteenlaskija.nollaaPisteetJaEnnatys();
         this.puolukat.clear();
         this.puolukanvali = 500;
         luoPuolukat(5);
@@ -143,6 +136,15 @@ public class Kaarylepeli extends Timer implements ActionListener {
     }
 
     /**
+     * Metodin avulla voidaan hakea Pisteenlaskija.
+     *
+     * @return Pisteenlaskija-olion
+     */
+    public Pisteenlaskija haePisteenlaskija() {
+        return this.pisteenlaskija;
+    }
+
+    /**
      * Metodin avulla voidaan hakea pelin senhetkinen vauhti.
      *
      * @return vauhti kokonaislukuna
@@ -152,73 +154,16 @@ public class Kaarylepeli extends Timer implements ActionListener {
     }
 
     /**
-     * Metodin avulla voidaan hakea tämän hetkiset pisteet.
-     *
-     * @return palauttaa pisteet kokonaislukuna
-     */
-    public int haePisteet() {
-        return this.pisteet;
-    }
-
-    /**
-     * Metodi päivittää pistetilanteen. Jos kaaryle on onnistunut hyppäämään
-     * puolukan yli, annetaan lisäpisteitä.
-     */
-    public void lisaaPisteet() {
-        pisteet++;
-
-        for (Puolukka puolukka : this.puolukat) {
-            if (puolukka.haeHahmonX() >= 50 && puolukka.haeHahmonX() <= (50 + vauhti)) {
-                pisteet += 50;
-            }
-        }
-    }
-
-    /**
-     * Metodi hakee tämän pelisession huippupisteet. Lisätty lähinnä testausta
-     * varten.
-     *
-     * @return palauttaa kokonaislukuna huippupisteet
-     */
-    public int haeHuippupisteet() {
-        return this.huippupisteet;
-    }
-
-    /**
-     * Metodi tarkistaa saiko pelaaja huippupisteet.
-     *
-     * @param pisteet pelin lopputilanteen pisteet
-     */
-    public void tallennaHuippupisteet(int pisteet) {
-        if (pisteet > this.huippupisteet) {
-            this.huippupisteet = pisteet;
-            this.ennatys = true;
-        }
-    }
-
-    /**
-     * Metodin avulla selviää tuliko päättyneessä pelissä huippupisteet. Pisteet
-     * eivät tallennu.
-     *
-     * @return palauttaa true ensimmäisellä pelikerralla ja jos saadut pisteet
-     * olivat huippupisteet
-     */
-    public boolean tuliEnnatys() {
-        return this.ennatys;
-    }
-
-    /**
      * Yksikin puolukka on tappava.
      */
     public void tarkistaOsumat() {
-        for (Puolukka puolukka : this.puolukat) {
+        for (Hahmo puolukka : this.puolukat) {
 
             if (this.kaaryle.osuu(puolukka)) {
                 this.peliJatkuu = false;
-                tallennaHuippupisteet(this.pisteet);
+                pisteenlaskija.tallennaHuippupisteet();
             }
         }
-
     }
 
     /**
@@ -226,11 +171,11 @@ public class Kaarylepeli extends Timer implements ActionListener {
      * sekä pelin vauhtia lisäämällä.
      */
     public void tarkistaVaikeustaso() {
-        if (this.pisteet % 1500 == 0) {
+        if (this.pisteenlaskija.haePisteet() % 1500 == 0) {
             this.vauhti++;
         }
 
-        if (this.pisteet % 250 == 0 && this.puolukanvali > 50) {
+        if (this.pisteenlaskija.haePisteet() % 250 == 0 && this.puolukanvali > 50) {
             this.puolukanvali -= 50;
         }
     }
@@ -245,45 +190,11 @@ public class Kaarylepeli extends Timer implements ActionListener {
     }
 
     /**
-     * Hyppää. Pitää kirjaa ollaanko menty jo lakipisteen ohi.
+     * Hyppää, mikäli kääryleen jalat ovat ilmassa.
      */
     public void kaaryleenHyppy() {
         if (this.kaaryle.onMaassa() == false) {
-
-            int hyppyarvo = kaaryle.hyppyarvo();
-
-            if (hyppyarvo > 0 && hyppyarvo <= 30) {
-                this.kaaryle.asetaSuunta(Suunta.YLOS);
-                this.kaaryle.liiku(20);
-                this.kaaryle.kasvataHyppyarvoa(10);
-            }
-
-            if (hyppyarvo > 30 && hyppyarvo <= 50) {
-                this.kaaryle.liiku(10);
-                this.kaaryle.kasvataHyppyarvoa(10);
-            }
-
-            if (hyppyarvo > 50 && hyppyarvo < 70) {
-                this.kaaryle.liiku(5);
-                this.kaaryle.kasvataHyppyarvoa(10);
-            }
-
-            if (hyppyarvo >= 70 && hyppyarvo < 90) {
-                this.kaaryle.asetaSuunta(Suunta.ALAS);
-                this.kaaryle.liiku(5);
-                this.kaaryle.kasvataHyppyarvoa(10);
-            }
-
-            if (hyppyarvo >= 90 && hyppyarvo < 110) {
-                this.kaaryle.liiku(10);
-                this.kaaryle.kasvataHyppyarvoa(10);
-            }
-
-            if (hyppyarvo >= 110) {
-                this.kaaryle.liiku(20);
-                this.kaaryle.kasvataHyppyarvoa(10);
-            }
-
+            this.kaaryle.hyppaa();
         }
     }
 
@@ -292,7 +203,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
      *
      * @return palauttaa puolukat Listissä.
      */
-    public List<Puolukka> haePuolukat() {
+    public List<Hahmo> haePuolukat() {
         return this.puolukat;
     }
 
@@ -342,7 +253,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
     public void puolukatVyoryvat() {
         boolean puolukkaKuoli = false;
 
-        for (Puolukka puolukka : this.puolukat) {
+        for (Hahmo puolukka : this.puolukat) {
             puolukka.liiku(this.vauhti);
 
             if (puolukka.haeHahmonX() <= -50) {
@@ -381,7 +292,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
     public void muusiEtenee() {
         boolean muusiYliReunan = false;
 
-        for (Muusi muusi : this.muusit) {
+        for (Hahmo muusi : this.muusit) {
             muusi.liiku(this.vauhti);
 
             if (muusi.haeHahmonX() <= -3000) {

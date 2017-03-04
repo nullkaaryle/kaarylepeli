@@ -1,6 +1,7 @@
 package kaarylepeli.peli;
 
 import kaarylepeli.peli.Kaarylepeli;
+import kaarylepeli.rakennusosat.Hahmo;
 import kaarylepeli.rakennusosat.Puolukka;
 import org.junit.*;
 import static org.junit.Assert.*;
@@ -26,24 +27,24 @@ public class KaarylepeliPuolukkaTest {
 
     @Test
     public void puolukkaEiVoiSyntyaToisenEdelle() {
-        Puolukka p1 = peli.haePuolukat().get(0);
-        Puolukka p2 = peli.haePuolukat().get(1);
+        Hahmo p1 = peli.haePuolukat().get(0);
+        Hahmo p2 = peli.haePuolukat().get(1);
         int vali = p2.haeHahmonX() - p1.haeHahmonX();
         assertTrue(vali > 0);
     }
 
     @Test
     public void puolukatEivatLiianLahellaToisiaan() {
-        Puolukka p1 = peli.haePuolukat().get(0);
-        Puolukka p2 = peli.haePuolukat().get(1);
+        Hahmo p1 = peli.haePuolukat().get(0);
+        Hahmo p2 = peli.haePuolukat().get(1);
         int vali = p2.haeHahmonX() - p1.haeHahmonX();
         assertTrue(vali >= 150);
     }
 
     @Test
     public void puolukatEivatLiianKaukanaToisistaan() {
-        Puolukka p1 = peli.haePuolukat().get(0);
-        Puolukka p2 = peli.haePuolukat().get(1);
+        Hahmo p1 = peli.haePuolukat().get(0);
+        Hahmo p2 = peli.haePuolukat().get(1);
         int vali = p2.haeHahmonX() - p1.haeHahmonX();
         assertTrue(vali <= 150 + 500);
     }

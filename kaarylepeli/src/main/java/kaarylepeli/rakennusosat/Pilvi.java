@@ -16,7 +16,7 @@ public class Pilvi extends Hahmo {
      * Konstruktori kutsuu Hahmo-luokan konstruktoria. luoPilvi() -metodia
      * kutsutaan konstruktorista.
      *
-     * @param lueteltu tyyppi Pilvityyppi 
+     * @param pilvityyppi luetelty tyyppi
      */
     public Pilvi(Pilvityyppi pilvityyppi) {
         super();
@@ -42,8 +42,8 @@ public class Pilvi extends Hahmo {
     }
 
     /**
-     * Asettaa pilvelle pilvityppin mukaiset arvot, eli vauhdin ja lähtöpisteen
-     * x- ja y-koordinaatin.
+     * Asettaa pilvelle pilvityppin mukaiset ennaltamäärätyt arvot, eli vauhdin
+     * ja lähtöpisteen x- ja y-koordinaatin.
      */
     public void asetaArvot() {
         if (this.pilvityyppi == Pilvityyppi.PIENI) {

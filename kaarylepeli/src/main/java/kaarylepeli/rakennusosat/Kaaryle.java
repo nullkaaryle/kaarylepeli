@@ -89,4 +89,43 @@ public class Kaaryle extends Hahmo {
         }
     }
 
+    /**
+     * Suorittaa kääryleen hypyn. Pitää kirjaa, onko menty jo lakipisteen ohi.
+     */
+    public void hyppaa() {
+        int hyppyarvo = hyppyarvo();
+
+        if (hyppyarvo > 0 && hyppyarvo <= 30) {
+            asetaSuunta(Suunta.YLOS);
+            liiku(20);
+            kasvataHyppyarvoa(10);
+        }
+
+        if (hyppyarvo > 30 && hyppyarvo <= 50) {
+            liiku(10);
+            kasvataHyppyarvoa(10);
+        }
+
+        if (hyppyarvo > 50 && hyppyarvo < 70) {
+            liiku(5);
+            kasvataHyppyarvoa(10);
+        }
+
+        if (hyppyarvo >= 70 && hyppyarvo < 90) {
+            asetaSuunta(Suunta.ALAS);
+            liiku(5);
+            kasvataHyppyarvoa(10);
+        }
+
+        if (hyppyarvo >= 90 && hyppyarvo < 110) {
+            liiku(10);
+            kasvataHyppyarvoa(10);
+        }
+
+        if (hyppyarvo >= 110) {
+            liiku(20);
+            kasvataHyppyarvoa(10);
+        }
+    }
+
 }

@@ -96,7 +96,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
 
     /**
      * Metodi piirtää pelin pilvet.
-     * 
+     *
      * @param g grafiikka
      */
     public void piirraPilvet(Graphics g) {
@@ -119,9 +119,8 @@ public class Piirtaja extends JPanel implements Paivitettava {
 
             if (pilvityyppi == Pilvityyppi.JATTI) {
                 pilvenKuva = this.pilviJatti;
-
             }
-            
+
             g.drawImage(pilvenKuva, pilvi.haeHahmonX(), pilvi.haeHahmonY(), this);
             Toolkit.getDefaultToolkit().sync();
         }
@@ -133,7 +132,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * @param g grafiikka
      */
     public void piirraMuusi(Graphics g) {
-        for (Muusi muusi : this.kaarylepeli.haeMuusit()) {
+        for (Hahmo muusi : this.kaarylepeli.haeMuusit()) {
             g.drawImage(muusinKuva, muusi.haeHahmonX(), muusi.haeHahmonY(), this);
             Toolkit.getDefaultToolkit().sync();
         }
@@ -145,7 +144,7 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * @param g grafiikka
      */
     public void piirraPuolukat(Graphics g) {
-        for (Puolukka puolukka : this.kaarylepeli.haePuolukat()) {
+        for (Hahmo puolukka : this.kaarylepeli.haePuolukat()) {
             g.drawImage(puolukanKuva, puolukka.haeHahmonX(), puolukka.haeHahmonY(), this);
             Toolkit.getDefaultToolkit().sync();
         }
@@ -191,10 +190,12 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * @param g grafiikka
      */
     public void piirraPisteet(Graphics g) {
-        String pisteteksti = "Pisteet: " + String.valueOf(kaarylepeli.haePisteet());
+        int pisteet = kaarylepeli.haePisteenlaskija().haePisteet();
+        int huippupisteet = kaarylepeli.haePisteenlaskija().haeHuippupisteet();
+        String pisteteksti = "Pisteet: " + String.valueOf(pisteet);
         g.setColor(Color.DARK_GRAY);
 
-        if (kaarylepeli.haePisteet() > kaarylepeli.haeHuippupisteet() && kaarylepeli.haeHuippupisteet() != 0) {
+        if (pisteet > huippupisteet && huippupisteet != 0) {
             g.setColor(Color.YELLOW);
         }
 
@@ -203,7 +204,8 @@ public class Piirtaja extends JPanel implements Paivitettava {
         Toolkit.getDefaultToolkit().sync();
 
         if (kaarylepeli.peliJatkuu() == false) {
-            piirraLopputilanne(g, pisteteksti);
+            boolean tuliEnnatys = kaarylepeli.haePisteenlaskija().tuliEnnatys();
+            piirraLopputilanne(g, pisteteksti, tuliEnnatys);
         }
     }
 
@@ -211,16 +213,17 @@ public class Piirtaja extends JPanel implements Paivitettava {
      * Pelin päätyttyä piirtää Game Over -tekstin ja mahdolliset ennätyspisteet.
      *
      * @param g grafiikka
-     * @param pisteteksti pisteteksti String-muodosaa
+     * @param pisteteksti pisteteksti String-muodossa
+     * @param tuliEnnatys kertoo onko pelissä tullut ennätyspisteet
      */
-    public void piirraLopputilanne(Graphics g, String pisteteksti) {
+    public void piirraLopputilanne(Graphics g, String pisteteksti, boolean tuliEnnatys) {
         g.setColor(Color.DARK_GRAY);
         g.setFont(new Font("Arial", 1, 50));
         g.drawString("Peli päättyi!", leveys / 2 - 150, korkeus / 2);
         g.setFont(new Font("Arial", 1, 23));
         g.drawString("- paina enter ja pelaa uudelleen -", leveys / 2 - 185, korkeus / 2 + 35);
 
-        if (kaarylepeli.tuliEnnatys()) {
+        if (tuliEnnatys == true) {
             g.setColor(Color.RED);
             g.setFont(new Font("Arial", 1, 20));
             g.drawString(pisteteksti + " - UUSI ENNÄTYS!", 20, 30);
