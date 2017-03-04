@@ -17,6 +17,11 @@ Pelissä pelaaja on kaalikääryle, joka juoksee lautasella perunamuusin pääll
 
 ##Pelin toiminnallisuus loppupalautuksessa##
 
+Kuvakaappaus pelistä (ensimmäinen julkaisu):
+
+![Kuvakaappaus pelistä](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kayttoOhjeKuvat/kuvakaappausPelista.png)
+
+
 Peli on ohjelmoitu Javalla, graafinen käyttöliittymä on toteutettu Swingillä. Pelin kuvat ovat itse piirrettyjä, työkaluna on käytetty Pixelmator-ohjelmaa. 
 
 Käyttäjän syötteet luetaan näppäimistön painalluksina. Luettuja syötteitä ovat välilyöntipainike ja nuolinäppäin ylöspäin, jotka molemmat saavat Kääryle-pelihahmon hyppäämään. Pelin päätyttyä uuden pelin voi aloittaa painamalla Enter-painiketta.
