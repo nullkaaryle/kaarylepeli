@@ -23,3 +23,7 @@ Päivä | Tunnit | Kuvaus
 21.02.2017 | 1.5  h | Demotilaisuus.
 23.02.2017 | 5.0  h | Vaikeusasteen kasvu lisätty. Pelisilmukan tuunausta ja opiskelua. Kuvat muutettu BufferedImageksi ja jar-tiedosto luotu ja testattu.
 24.02.2017 | 10.0 h | Pääpaino testauksella. Kaarypeli-luokan testit jaettu yhteenkuuluviin kokonaisuuksiin. Luotu käyttöohjeet tekstinä ja kuvina sekä tarkennettu rakennekuvausta. Tehty myös pilvien grafiikat ja sunniteltu pilviluokan rakennetta.
+02.03.2017 | 0.25 h| Pyydetty palautetta pelistä kahdelta kurssin ulkopuoliselta vapaaehtoiselta käyttäjältä (ei aktiivista pelitaustaa, ei alalla)
+03.03.2017 | 1.5 h | Lisätty parallax-pilvet, testausta lisätty.
+03.03.2017 | 0.25 h| Testattu peliä ja pyydetty käyttäjäpalautetta (2 vapaaehtoista koekäyttäjää kurssin ulkopuolelta) 
+04.03.2017 | 6.0 h | Refaktoroitu, Kaarylepeli-luokasta siirretty pisteisiin liittyviä toimintoja Pisteenlaskija-luokalle, Kaaryle-luokalle siirretty sille kuuluvaa toiminnallisuutta. Testit päivitetty vastaamaan uutta jakoa. Kaikki luokka- ja sekvenssi kaaviot päivitetty. Valmisteltu loppupalautus raportteineen ja kansiorakenteineen. Viimeinen commit ja GitHub-release.
