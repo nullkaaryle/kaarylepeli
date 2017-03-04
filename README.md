@@ -2,7 +2,8 @@
 ## Käärylepeli 
 
 Ohjelmoinnin harjoitustyö 2017.
-* [Javadoc](https://github.com/nullkaaryle/kaarylepeli/tree/master/javadoc)
+* [Javadoc](https://github.com/nullkaaryle/kaarylepeli/tree/master/javadoc) 
+  * [HTML Preview -linkki](https://htmlpreview.github.io/?https://github.com/nullkaaryle/kaarylepeli/blob/master/javadoc/allclasses-frame.html)
 * [Dokumentaatio](https://github.com/nullkaaryle/kaarylepeli/tree/master/dokumentaatio)
   * [Aiheen kuvaus ja rakenne](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)
     * [Aiheen kuvaus](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md#aiheen-kuvaus)
