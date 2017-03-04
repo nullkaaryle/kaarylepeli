@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 12,
-             Errors: 1,
+      <title>File: 15,
+             Errors: 2,
              Warnings: 0,
              Infos: 0
       </title>
@@ -44,20 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Kuuntelija.java">kaarylepeli/gui/Kuuntelija.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#kaarylepeli.Main.java">kaarylepeli/Main.java</a>
@@ -88,7 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Paivitettava.java">kaarylepeli/gui/Paivitettava.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.peli.Pisteenlaskija.java">kaarylepeli/peli/Pisteenlaskija.java</a>
                 </td>
                 <td>
                   0
@@ -102,7 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Kaaryle.java">kaarylepeli/rakennusosat/Kaaryle.java</a>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Paivitettava.java">kaarylepeli/gui/Paivitettava.java</a>
                 </td>
                 <td>
                   0
@@ -125,7 +111,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
               </tr>
                           <tr>
@@ -201,6 +187,62 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Suunta.java">kaarylepeli/rakennusosat/Suunta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.gui.Kuuntelija.java">kaarylepeli/gui/Kuuntelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Kaaryle.java">kaarylepeli/rakennusosat/Kaaryle.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Pilvi.java">kaarylepeli/rakennusosat/Pilvi.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kaarylepeli.rakennusosat.Pilvityyppi.java">kaarylepeli/rakennusosat/Pilvityyppi.java</a>
                 </td>
                 <td>
                   0
