@@ -94,25 +94,32 @@ public class Piirtaja extends JPanel implements Paivitettava {
         Toolkit.getDefaultToolkit().sync();
     }
 
+    /**
+     * Metodi piirtää pelin pilvet.
+     * 
+     * @param g grafiikka
+     */
     public void piirraPilvet(Graphics g) {
         for (Pilvi pilvi : this.kaarylepeli.haePilvet()) {
-            
+
             Pilvityyppi pilvityyppi = pilvi.haePilvityyppi();
             BufferedImage pilvenKuva = null;
-            
+
             if (pilvityyppi == Pilvityyppi.PIENI) {
                 pilvenKuva = this.pilviPieni;
             }
-            
+
             if (pilvityyppi == Pilvityyppi.KESKI) {
                 pilvenKuva = this.pilviKeski;
-            }    
-            
+            }
+
             if (pilvityyppi == Pilvityyppi.ISO) {
                 pilvenKuva = this.pilviIso;
             }
+
             if (pilvityyppi == Pilvityyppi.JATTI) {
-                pilvenKuva = this.pilviIso;
+                pilvenKuva = this.pilviJatti;
+
             }
             
             g.drawImage(pilvenKuva, pilvi.haeHahmonX(), pilvi.haeHahmonY(), this);

@@ -67,6 +67,7 @@ public class Kaarylepeli extends Timer implements ActionListener {
             this.stop();
             return;
         }
+
         pilvetLipuvat();
         muusiEtenee();
         kaaryleenHyppy();
@@ -75,7 +76,6 @@ public class Kaarylepeli extends Timer implements ActionListener {
         tarkistaOsumat();
         tarkistaVaikeustaso();
         this.setDelay(50);
-
     }
 
     /**
@@ -393,9 +393,21 @@ public class Kaarylepeli extends Timer implements ActionListener {
             this.muusit.remove(0);
             this.muusit.add(new Muusi(3000, this.korkeus));
         }
-
     }
 
+    /**
+     * Metodin avulla haetaan lista kaikista Pilvi-hahmoista.
+     *
+     * @return palauttaa ArrayList:ssa pelin pilvet
+     */
+    public List<Pilvi> haePilvet() {
+        return this.pilvet;
+    }
+
+    /**
+     * Metodi luo Pilvi-hahmot peliin. Pilvihahmoja on pelissä aina neljä
+     * erilaista, ja ne edustavat kukin omaa pilvityyppiään.
+     */
     public void luoPilvet() {
         this.pilvet.add(new Pilvi(Pilvityyppi.PIENI));
         this.pilvet.add(new Pilvi(Pilvityyppi.KESKI));
@@ -403,34 +415,31 @@ public class Kaarylepeli extends Timer implements ActionListener {
         this.pilvet.add(new Pilvi(Pilvityyppi.JATTI));
     }
 
+    /**
+     * Metodin avulla saadaan pilvet liikkumaan.
+     */
     public void pilvetLipuvat() {
         boolean pilviLapiTaivaan = false;
         List<Pilvi> haihtuneet = new ArrayList<>();
-        
+
         for (Pilvi pilvi : this.pilvet) {
             pilvi.liiku(pilvi.haeVauhti());
 
-            if (pilvi.haeHahmonX() < -100) {
+            if (pilvi.haeHahmonX() < -150) {
                 pilviLapiTaivaan = true;
                 haihtuneet.add(pilvi);
             }
         }
 
         if (pilviLapiTaivaan == true) {
-            
+
             for (int i = 0; i < haihtuneet.size(); i++) {
                 Pilvi haihtunut = haihtuneet.get(i);
                 this.pilvet.add(new Pilvi(haihtunut.haePilvityyppi()));
                 this.pilvet.remove(haihtunut);
             }
         }
-    }
-    
-    public List<Pilvi> haePilvet() {
-        return this.pilvet;
+
     }
 
-    
-    
-    
 }
