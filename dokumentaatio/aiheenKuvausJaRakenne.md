@@ -13,6 +13,8 @@ Yksi pelaaja
 ###Käyttäjän toiminnot:###
 Pelissä pelaaja on kaalikääryle, joka juoksee lautasella perunamuusin päällä. Lautasella vastaan tulee vihaisia puolukoita. Pelin ideana on selvitä mahdollisimman kauan osumatta puolukkaan. Puolukoita väistetään hyppäämällä. Peli vaikeutuu hiljalleen siten, että vauhti kasvaa ja puolukat tulevat yhä tiheämmin. Peli koostuu yhdestä pelialueesta (pelikentästä). Pelaajalla ei ole mahdollisuutta muokata pelin ominaisuuksia. 
 
+![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
+
 ##Pelin toiminnallisuus loppupalautuksessa##
 
 Peli on ohjelmoitu Javalla, graafinen käyttöliittymä on toteutettu Swingillä. Pelin kuvat ovat itse piirrettyjä, työkaluna on käytetty Pixelmator-ohjelmaa. 
@@ -37,9 +39,6 @@ Peli voi antaa virheilmoituksia. Virheilmoitus voi tulla mm. siitä että piirt�
 Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle upottavassa perunamuussissa. Hyppää vastaantulevien äkäisten puolukoiden yli välilyönnillä tai ylöspäin-nuolinäppäimellä. Peli päättyy jos osut puolukkaan, mutta voit aloittaa aina uuden pelin painamalla Enter-näppäintä. Seuraa pisteitä vasemmasta yläkulmasta, jos pisteet muuttuvat keltaiseksi olet tekemässä oman ennätyksesi! 
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
-
-
-
 
 
 ##Pelin kehitysideat##
@@ -89,7 +88,7 @@ Paketissa on kaksi luokkaa: Kaarylepeli ja Pisteenlaskija. Kaarylepeli-luokka pe
 * * *
 
 ###Sekvenssikaavio pelisilmukasta:###
-![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_kaynnistys_20170221.png)
+![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_yksiPelisilmukka.png)
 
 * * *
 
