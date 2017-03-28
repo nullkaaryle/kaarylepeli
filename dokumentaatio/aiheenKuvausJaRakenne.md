@@ -1,21 +1,21 @@
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-##Aiheen kuvaus:##
+## Aiheen kuvaus: ##
 
-###Aihe:###
+### Aihe: ###
 Käärylepeli
 
 
-###Käyttäjät:###
+### Käyttäjät: ###
 Yksi pelaaja
 
 
-###Käyttäjän toiminnot:###
+### Käyttäjän toiminnot: ###
 Pelissä pelaaja on kaalikääryle, joka juoksee lautasella perunamuusin päällä. Lautasella vastaan tulee vihaisia puolukoita. Pelin ideana on selvitä mahdollisimman kauan osumatta puolukkaan. Puolukoita väistetään hyppäämällä. Peli vaikeutuu hiljalleen siten, että vauhti kasvaa ja puolukat tulevat yhä tiheämmin. Peli koostuu yhdestä pelialueesta (pelikentästä). Pelaajalla ei ole mahdollisuutta muokata pelin ominaisuuksia. 
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-##Pelin toiminnallisuus loppupalautuksessa##
+## Pelin toiminnallisuus loppupalautuksessa ##
 
 Kuvakaappaus pelistä (ensimmäinen julkaisu):
 
@@ -37,23 +37,23 @@ Peli voi antaa virheilmoituksia. Virheilmoitus voi tulla mm. siitä että piirt�
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-##Käyttöohjeet:##
+## Käyttöohjeet: ##
 
-###[Katso kuvitettu käyttöohje!](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kuvallinenKayttoohje.md)####
+### [Katso kuvitettu käyttöohje!](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kuvallinenKayttoohje.md) ###
 
 Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle upottavassa perunamuussissa. Hyppää vastaantulevien äkäisten puolukoiden yli välilyönnillä tai ylöspäin-nuolinäppäimellä. Peli päättyy jos osut puolukkaan, mutta voit aloittaa aina uuden pelin painamalla Enter-näppäintä. Seuraa pisteitä vasemmasta yläkulmasta, jos pisteet muuttuvat keltaiseksi olet tekemässä oman ennätyksesi! 
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
 
-##Pelin kehitysideat##
+## Pelin kehitysideat ##
 
-####Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia:####
+#### Demossa 21.2.2017 esiintulleita korjaus- ja kehitysehdotuksia: ####
 - [x] pisteiden ja lopputekstin näkymistä voisi parantaa (esim. tekstin väriä vaihtamalla tai varjostuksilla)
 - [x] vaikeusaste voisi kasvaa tai vaihtelevuutta lisätä jotenkin (erilaisia vihollisia ja vaikka eri nopeuksia)
 - [x] oma huomio: pelianimaatiot voisivat olla sujuvampia _tutkittu_
 
-####Pelin mahdollisia laajennuksia jatkossa:####
+#### Pelin mahdollisia laajennuksia jatkossa: ####
 - [ ] historia: tiedostoon kirjoitus ja kaikkien aikojen huippupisteiden tallentaminen l. HiScore-listan ylläpito
 - [ ] äänitehosteet: hyppy, puolukan ylitys, kuolema, tasa- ja huippupisteet
 - [ ] logiikka, grafiikka: aloitusnäyttö
@@ -65,7 +65,7 @@ Olet urhea kaalikääryle ja tehtävänäsi on edetä mahdollisimman pitkälle u
 
 ![Puolukka](https://github.com/nullkaaryle/kaarylepeli/blob/master/kaarylepeli/src/main/resources/kaarylepelikuvat/puolukka.png)
 
-##Rakennekuvaus ja kaaviot:##
+## Rakennekuvaus ja kaaviot: ##
 Pelissä on yhteensä 15 luokkaa. Luokat on jaettu yhteenkuuluviin kokonaisuuksiin neljään pakettiin:
 
 * **kaarylepeli**
@@ -82,17 +82,17 @@ Paketissa on kaksi luokkaa: Kaarylepeli ja Pisteenlaskija. Kaarylepeli-luokka pe
 
 * * *
 
-###Luokkakaavio:###
+### Luokkakaavio: ###
 ![Luokkakaavio](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/luokkakaavio_vaaka.png)
 
 * * *
 
-###Sekvenssikaavio pelin käynnistyksestä:###
+### Sekvenssikaavio pelin käynnistyksestä: ###
 ![Sekvenssikaavio1](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_pelinKaynnistys.png)
 
 * * *
 
-###Sekvenssikaavio pelisilmukasta:###
+### Sekvenssikaavio pelisilmukasta: ###
 ![Sekvenssikaavio2](https://github.com/nullkaaryle/kaarylepeli/blob/master/dokumentaatio/kaaviot/sekvenssikaavio_yksiPelisilmukka.png)
 
 * * *
